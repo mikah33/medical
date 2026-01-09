@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical Transportation Business - Step-by-Step Startup Guide</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #e74c3c);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .urgency-banner {
+            background: #e74c3c;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            font-weight: bold;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.7; }
+            100% { opacity: 1; }
+        }
+
+        .nav-menu {
+            background: #34495e;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            background: #2c3e50;
+            border-bottom-color: #e74c3c;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .phase {
+            margin-bottom: 3rem;
+            background: #f8f9fa;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+
+        .phase-header {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .phase-header h2 {
+            font-size: 1.8rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .phase-duration {
+            background: rgba(255,255,255,0.2);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+
+        .phase-content {
+            padding: 2rem;
+        }
+
+        .step {
+            background: white;
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 5px solid #3498db;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .step.critical {
+            border-left-color: #e74c3c;
+            background: #fdf2f2;
+        }
+
+        .step.urgent {
+            border-left-color: #f39c12;
+            background: #fefbf3;
+            animation: glow 3s infinite;
+        }
+
+        @keyframes glow {
+            0% { box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+            50% { box-shadow: 0 4px 20px rgba(243,156,18,0.3); }
+            100% { box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        }
+
+        .step-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .step h3 {
+            color: #2c3e50;
+            font-size: 1.4rem;
+            margin: 0;
+        }
+
+        .step-meta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .cost { background: #e8f5e8; color: #2d5a2d; }
+        .duration { background: #e3f2fd; color: #1565c0; }
+        .priority-high { background: #ffebee; color: #c62828; }
+        .priority-medium { background: #fff3e0; color: #ef6c00; }
+        .priority-low { background: #f3e5f5; color: #7b1fa2; }
+
+        .step-actions {
+            list-style: none;
+            margin: 1rem 0;
+        }
+
+        .step-actions li {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: #f8f9fa;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .step-actions input[type="checkbox"] {
+            transform: scale(1.2);
+        }
+
+        .step-contact {
+            background: #e8f4fd;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+
+        .step-contact h4 {
+            color: #1565c0;
+            margin-bottom: 0.5rem;
+        }
+
+        .step-warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+            color: #856404;
+        }
+
+        .dependency-alert {
+            background: #f8d7da;
+            border: 1px solid #f5c6cb;
+            color: #721c24;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 1rem;
+        }
+
+        .progress-tracker {
+            position: fixed;
+            top: 50%;
+            right: 20px;
+            transform: translateY(-50%);
+            background: white;
+            padding: 1rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            z-index: 1000;
+            min-width: 200px;
+        }
+
+        .progress-tracker h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        .progress-bar {
+            background: #ecf0f1;
+            height: 20px;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            transition: width 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .progress-stats {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            color: #7f8c8d;
+        }
+
+        .milestone {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            text-align: center;
+        }
+
+        .milestone h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .btn-danger {
+            background: #e74c3c;
+        }
+
+        .btn-danger:hover {
+            background: #c0392b;
+        }
+
+        .btn-success {
+            background: #27ae60;
+        }
+
+        .btn-success:hover {
+            background: #219a52;
+        }
+
+        .btn-warning {
+            background: #f39c12;
+        }
+
+        .btn-warning:hover {
+            background: #e67e22;
+        }
+
+        .timeline-overview {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .timeline-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .timeline-phase {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-top: 4px solid #3498db;
+            text-align: center;
+        }
+
+        .timeline-phase h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .phase-cost {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #27ae60;
+            margin: 0.5rem 0;
+        }
+
+        .cost-breakdown {
+            background: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .cost-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .cost-table th,
+        .cost-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .cost-table th {
+            background: #34495e;
+            color: white;
+        }
+
+        .cost-table tr:hover {
+            background: #f5f5f5;
+        }
+
+        .funding-alert {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 2rem;
+            margin: 2rem 0;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .funding-alert h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .days-remaining {
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 1rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .progress-tracker {
+                position: static;
+                transform: none;
+                margin: 2rem 0;
+                right: auto;
+            }
+
+            .step-meta {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-route"></i> Medical Transportation Startup Guide</h1>
+            <p>Your Step-by-Step Roadmap to Launching in South Carolina</p>
+        </div>
+
+        <div class="urgency-banner">
+            <i class="fas fa-exclamation-triangle"></i>
+            URGENT: Federal funding deadline January 15, 2026 (6 DAYS REMAINING) - Up to $500K available
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#overview" class="nav-link active">Overview</a></li>
+                <li><a href="#phase1" class="nav-link">Foundation (Week 1-2)</a></li>
+                <li><a href="#phase2" class="nav-link">Funding (Week 2-4)</a></li>
+                <li><a href="#phase3" class="nav-link">Licensing (Month 2-3)</a></li>
+                <li><a href="#phase4" class="nav-link">Setup (Month 3-4)</a></li>
+                <li><a href="#phase5" class="nav-link">Launch (Month 4-5)</a></li>
+                <li><a href="#phase6" class="nav-link">Growth (Month 6+)</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- Progress Tracker -->
+            <div class="progress-tracker" id="progressTracker">
+                <h4><i class="fas fa-chart-line"></i> Progress</h4>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill" style="width: 0%;"></div>
+                </div>
+                <div class="progress-stats">
+                    <span id="completedSteps">0</span>
+                    <span>of</span>
+                    <span id="totalSteps">0</span>
+                </div>
+                <div style="margin-top: 1rem;">
+                    <strong id="progressPercentage">0%</strong> Complete
+                </div>
+            </div>
+
+            <!-- Overview Section -->
+            <section id="overview" class="phase">
+                <div class="phase-header">
+                    <h2><i class="fas fa-map"></i> Implementation Overview</h2>
+                    <div class="phase-duration">5-6 Months Total</div>
+                </div>
+                <div class="phase-content">
+                    <div class="funding-alert">
+                        <h3><i class="fas fa-clock"></i> Critical Timing Alert</h3>
+                        <div class="days-remaining" id="daysRemaining">6</div>
+                        <p>Days until Federal Lands Highway funding deadline (January 15, 2026)</p>
+                        <p>This could provide substantial startup capital - immediate action required!</p>
+                    </div>
+
+                    <div class="timeline-overview">
+                        <h3><i class="fas fa-calendar-alt"></i> Timeline Overview</h3>
+                        <div class="timeline-grid">
+                            <div class="timeline-phase">
+                                <h4>Foundation Phase</h4>
+                                <div class="phase-cost">$2,000 - $5,000</div>
+                                <p>Business formation, initial planning, grant applications</p>
+                                <strong>2-4 weeks</strong>
+                            </div>
+                            <div class="timeline-phase">
+                                <h4>Funding & Licensing</h4>
+                                <div class="phase-cost">$65,000 - $130,000</div>
+                                <p>Secure funding, complete licensing requirements</p>
+                                <strong>6-8 weeks</strong>
+                            </div>
+                            <div class="timeline-phase">
+                                <h4>Operations Setup</h4>
+                                <div class="phase-cost">$40,000 - $80,000</div>
+                                <p>Vehicle acquisition, technology, staff hiring</p>
+                                <strong>4-6 weeks</strong>
+                            </div>
+                            <div class="timeline-phase">
+                                <h4>Launch & Growth</h4>
+                                <div class="phase-cost">$15,000+ monthly</div>
+                                <p>Begin operations, scale services, optimize</p>
+                                <strong>Ongoing</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="cost-breakdown">
+                        <h3><i class="fas fa-calculator"></i> Complete Investment Breakdown</h3>
+                        <table class="cost-table">
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Conservative (1 Vehicle)</th>
+                                    <th>Aggressive (2 Vehicles)</th>
+                                    <th>Timeline</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>Business Formation</strong></td>
+                                    <td>$2,000</td>
+                                    <td>$3,000</td>
+                                    <td>Week 1-2</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Vehicles & Equipment</strong></td>
+                                    <td>$40,000</td>
+                                    <td>$80,000</td>
+                                    <td>Month 2-3</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Licensing & Insurance</strong></td>
+                                    <td>$7,000</td>
+                                    <td>$13,000</td>
+                                    <td>Month 2-3</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Technology Setup</strong></td>
+                                    <td>$3,000</td>
+                                    <td>$7,000</td>
+                                    <td>Month 3</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Working Capital</strong></td>
+                                    <td>$15,000</td>
+                                    <td>$30,000</td>
+                                    <td>Month 1</td>
+                                </tr>
+                                <tr style="background: #e8f5e8; font-weight: bold;">
+                                    <td><strong>TOTAL INVESTMENT</strong></td>
+                                    <td><strong>$67,000</strong></td>
+                                    <td><strong>$133,000</strong></td>
+                                    <td><strong>4-5 Months</strong></td>
+                                </tr>
+                                <tr style="background: #e3f2fd; font-weight: bold;">
+                                    <td><strong>Annual Revenue Potential</strong></td>
+                                    <td><strong>$86,400 - $100,000</strong></td>
+                                    <td><strong>$172,800 - $200,000</strong></td>
+                                    <td><strong>Year 1</strong></td>
+                                </tr>
+                                <tr style="background: #fff3e0; font-weight: bold;">
+                                    <td><strong>Expected ROI</strong></td>
+                                    <td><strong>19% - 40%</strong></td>
+                                    <td><strong>21% - 42%</strong></td>
+                                    <td><strong>Year 1</strong></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="milestone">
+                        <h3><i class="fas fa-trophy"></i> Success Milestones</h3>
+                        <p><strong>Month 6:</strong> Break-even operations | <strong>Month 12:</strong> 20%+ profit margin | <strong>Month 18:</strong> Fleet expansion ready</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 1: Foundation -->
+            <section id="phase1" class="phase">
+                <div class="phase-header">
+                    <h2><i class="fas fa-foundation"></i> Phase 1: Foundation</h2>
+                    <div class="phase-duration">Week 1-2</div>
+                </div>
+                <div class="phase-content">
+                    <div class="step critical">
+                        <div class="step-header">
+                            <h3><i class="fas fa-exclamation-triangle"></i> URGENT: Federal Grant Application</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$0 - $500K potential</span>
+                                <span class="meta-item duration">1-3 days</span>
+                                <span class="meta-item priority-high">CRITICAL</span>
+                            </div>
+                        </div>
+                        <div class="funding-alert" style="margin: 0;">
+                            <h4>⏰ January 15, 2026 Deadline (6 DAYS)</h4>
+                            <p>Federal Lands Highway funding could provide substantial startup capital</p>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Contact FHWA immediately for application requirements</li>
+                            <li><input type="checkbox" class="step-checkbox"> Prepare project proposal for rural transportation infrastructure</li>
+                            <li><input type="checkbox" class="step-checkbox"> Submit application by January 15, 2026</li>
+                            <li><input type="checkbox" class="step-checkbox"> Begin BUILD Grant application for February 24 deadline</li>
+                        </ul>
+                        <div class="step-contact">
+                            <h4>Emergency Contact</h4>
+                            <p><strong>FHWA Office:</strong> Contact immediately via grants.gov or FHWA rural programs office</p>
+                            <p><strong>Action:</strong> Submit inquiry today about rural medical transportation infrastructure</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-building"></i> Business Formation</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$500 - $1,500</span>
+                                <span class="meta-item duration">3-5 days</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Choose business structure (LLC recommended for liability protection)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Register with SC Secretary of State</li>
+                            <li><input type="checkbox" class="step-checkbox"> Obtain Federal EIN from IRS</li>
+                            <li><input type="checkbox" class="step-checkbox"> Open business bank account</li>
+                            <li><input type="checkbox" class="step-checkbox"> Register for state taxes</li>
+                        </ul>
+                        <div class="step-contact">
+                            <h4>Key Contacts</h4>
+                            <p><strong>SC Secretary of State:</strong> sos.sc.gov | (803) 734-2170</p>
+                            <p><strong>IRS EIN:</strong> irs.gov/ein | Apply online instantly</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-search"></i> Market Research & Planning</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$0 - $500</span>
+                                <span class="meta-item duration">5-7 days</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Identify target counties (focus on rural areas for federal funding)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Research local competition and pricing</li>
+                            <li><input type="checkbox" class="step-checkbox"> Contact healthcare facilities for partnership interest</li>
+                            <li><input type="checkbox" class="step-checkbox"> Analyze Medicaid transportation demand</li>
+                            <li><input type="checkbox" class="step-checkbox"> Create business plan based on research findings</li>
+                        </ul>
+                        <div class="step-warning">
+                            <strong>Strategic Focus:</strong> Prioritize rural counties to align with federal funding opportunities and reduced competition.
+                        </div>
+                    </div>
+
+                    <div class="step urgent">
+                        <div class="step-header">
+                            <h3><i class="fas fa-dollar-sign"></i> Additional Grant Applications</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$0 - $500K potential</span>
+                                <span class="meta-item duration">7-10 days</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Apply for USDA Rural Business Development Grants</li>
+                            <li><input type="checkbox" class="step-checkbox"> Research HHS Rural Health Transformation Program</li>
+                            <li><input type="checkbox" class="step-checkbox"> Investigate ICAM pilot program opportunities</li>
+                            <li><input type="checkbox" class="step-checkbox"> Contact state rural development offices</li>
+                        </ul>
+                        <div class="step-contact">
+                            <h4>Grant Resources</h4>
+                            <p><strong>USDA Rural Development:</strong> rd.usda.gov | (803) 253-3846</p>
+                            <p><strong>Grants.gov:</strong> Search "NEMT" and "Rural Transportation"</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 2: Funding & Initial Setup -->
+            <section id="phase2" class="phase">
+                <div class="phase-header">
+                    <h2><i class="fas fa-money-bill-wave"></i> Phase 2: Funding & Financial Setup</h2>
+                    <div class="phase-duration">Week 2-4</div>
+                </div>
+                <div class="phase-content">
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-hand-holding-usd"></i> Secure Startup Capital</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$65K - $130K target</span>
+                                <span class="meta-item duration">2-4 weeks</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Apply for SBA 7(a) loan (up to $5M available)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Consider SBA 504 loan for fixed assets</li>
+                            <li><input type="checkbox" class="step-checkbox"> Explore equipment financing options</li>
+                            <li><input type="checkbox" class="step-checkbox"> Secure personal investment/savings commitment</li>
+                            <li><input type="checkbox" class="step-checkbox"> Document 10% equity injection (new SBA requirement)</li>
+                        </ul>
+                        <div class="step-warning">
+                            <strong>2025-2026 SBA Changes:</strong> New requirements include collateral for loans $50K+, minimum credit score 165, and 10% equity injection for startups.
+                        </div>
+                        <div class="step-contact">
+                            <h4>Funding Resources</h4>
+                            <p><strong>SBA SC District Office:</strong> (803) 765-5377</p>
+                            <p><strong>SCORE Mentors:</strong> score.org | Free business counseling</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-shield-alt"></i> Insurance Research & Quotes</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$7K - $15K annually</span>
+                                <span class="meta-item duration">1-2 weeks</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Get commercial auto insurance quotes (25/50/25 minimum)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Research general liability coverage options</li>
+                            <li><input type="checkbox" class="step-checkbox"> Investigate workers' compensation requirements</li>
+                            <li><input type="checkbox" class="step-checkbox"> Compare cargo insurance providers</li>
+                            <li><input type="checkbox" class="step-checkbox"> Budget for insurance deposits and annual premiums</li>
+                        </ul>
+                        <div class="step-contact">
+                            <h4>Insurance Specialists</h4>
+                            <p><strong>Commercial Focus:</strong> Look for agents specializing in transportation/medical services</p>
+                            <p><strong>Expected Cost:</strong> $4,000-$11,000 per vehicle annually</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-calculator"></i> Financial Management Setup</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$500 - $2,000</span>
+                                <span class="meta-item duration">1 week</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Set up business accounting system (QuickBooks recommended)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Establish business credit lines</li>
+                            <li><input type="checkbox" class="step-checkbox"> Create cash flow management plan</li>
+                            <li><input type="checkbox" class="step-checkbox"> Set up invoicing and billing systems</li>
+                            <li><input type="checkbox" class="step-checkbox"> Plan for 30-90 day reimbursement cycles</li>
+                        </ul>
+                        <div class="dependency-alert">
+                            <strong>Critical Note:</strong> Medical transportation has long reimbursement cycles. Plan for substantial working capital to cover 2-3 months of operations.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 3: Licensing & Compliance -->
+            <section id="phase3" class="phase">
+                <div class="phase-header">
+                    <h2><i class="fas fa-clipboard-check"></i> Phase 3: Licensing & Regulatory Compliance</h2>
+                    <div class="phase-duration">Month 2-3</div>
+                </div>
+                <div class="phase-content">
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-certificate"></i> SCDHHS NEMT Provider Certification</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$500 - $1,500</span>
+                                <span class="meta-item duration">4-6 weeks</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Submit NEMT provider certification application to SCDHHS</li>
+                            <li><input type="checkbox" class="step-checkbox"> Complete background checks for all personnel</li>
+                            <li><input type="checkbox" class="step-checkbox"> Demonstrate financial stability and insurance coverage</li>
+                            <li><input type="checkbox" class="step-checkbox"> Provide vehicle inspection documentation</li>
+                            <li><input type="checkbox" class="step-checkbox"> Complete driver qualification requirements</li>
+                        </ul>
+                        <div class="step-contact">
+                            <h4>SCDHHS Contact</h4>
+                            <p><strong>Address:</strong> 1801 Main Street, Columbia, SC 29202</p>
+                            <p><strong>Phone:</strong> (803) 898-2500</p>
+                            <p><strong>Email:</strong> info@scdhhs.gov</p>
+                        </div>
+                        <div class="dependency-alert">
+                            <strong>Dependency:</strong> This certification is required before serving Medicaid recipients - start immediately!
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-id-card"></i> Driver Licensing & Certification</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$200 - $1,000 per driver</span>
+                                <span class="meta-item duration">2-4 weeks</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Obtain Commercial Driver's License if required (26K+ lbs or 16+ passengers)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Complete DOT medical examination and certification</li>
+                            <li><input type="checkbox" class="step-checkbox"> Get First Aid and CPR certification</li>
+                            <li><input type="checkbox" class="step-checkbox"> Complete EMS personnel certification if required</li>
+                            <li><input type="checkbox" class="step-checkbox"> Document patient care training completion</li>
+                        </ul>
+                        <div class="step-contact">
+                            <h4>SC DMV Contact</h4>
+                            <p><strong>Website:</strong> dmv.sc.gov (updated January 5, 2026)</p>
+                            <p><strong>CDL Help Desk:</strong> (803) 896-2673</p>
+                            <p><strong>Hours:</strong> Monday-Friday 8:30 a.m.-5:00 p.m.</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-file-medical"></i> DOT Registration & Compliance</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$300 - $800</span>
+                                <span class="meta-item duration">2-3 weeks</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Complete USDOT registration for commercial vehicles</li>
+                            <li><input type="checkbox" class="step-checkbox"> Establish drug and alcohol testing program</li>
+                            <li><input type="checkbox" class="step-checkbox"> Create driver qualification files</li>
+                            <li><input type="checkbox" class="step-checkbox"> Set up FMCSA Clearinghouse account</li>
+                            <li><input type="checkbox" class="step-checkbox"> Develop safety management procedures</li>
+                        </ul>
+                        <div class="step-warning">
+                            <strong>2025 Update:</strong> Enhanced safety technology requirements and electronic medical exam reporting now in effect.
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-user-shield"></i> HIPAA & Privacy Compliance</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$500 - $2,000</span>
+                                <span class="meta-item duration">2 weeks</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Develop HIPAA privacy and security policies</li>
+                            <li><input type="checkbox" class="step-checkbox"> Train all staff on PHI handling procedures</li>
+                            <li><input type="checkbox" class="step-checkbox"> Establish Business Associate Agreements with healthcare providers</li>
+                            <li><input type="checkbox" class="step-checkbox"> Implement physical safeguards (locked transport, tamper-evident packaging)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Set up encrypted communication systems</li>
+                        </ul>
+                        <div class="step-warning">
+                            <strong>February 16, 2026 Deadline:</strong> Full Part 2 compliance required by this date!
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 4: Operations Setup -->
+            <section id="phase4" class="phase">
+                <div class="phase-header">
+                    <h2><i class="fas fa-cogs"></i> Phase 4: Operations Setup</h2>
+                    <div class="phase-duration">Month 3-4</div>
+                </div>
+                <div class="phase-content">
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-ambulance"></i> Vehicle Acquisition & Setup</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$35K - $80K</span>
+                                <span class="meta-item duration">4-6 weeks</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Purchase wheelchair-accessible vehicles (used: $35K, new: $60K+)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Install required medical and safety equipment</li>
+                            <li><input type="checkbox" class="step-checkbox"> Complete ADA compliance modifications</li>
+                            <li><input type="checkbox" class="step-checkbox"> Pass state vehicle inspections</li>
+                            <li><input type="checkbox" class="step-checkbox"> Obtain commercial vehicle registration and plates</li>
+                        </ul>
+                        <div class="step-contact">
+                            <h4>Vehicle Resources</h4>
+                            <p><strong>Wheelchair Van Dealers:</strong> Research local dealers specializing in medical transport</p>
+                            <p><strong>Budget Planning:</strong> Used vehicles: $15K-$40K+ | New vehicles: $30K-$60K+</p>
+                        </div>
+                        <div class="dependency-alert">
+                            <strong>Critical:</strong> Vehicle setup is on the critical path - delays here affect launch timeline!
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-laptop"></i> Technology Implementation</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$3K - $7K</span>
+                                <span class="meta-item duration">2-3 weeks</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Install Bambi NEMT scheduling software ($69/month per vehicle)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Set up GPS tracking and route optimization</li>
+                            <li><input type="checkbox" class="step-checkbox"> Implement driver mobile apps and communication tools</li>
+                            <li><input type="checkbox" class="step-checkbox"> Configure billing and insurance claim processing</li>
+                            <li><input type="checkbox" class="step-checkbox"> Test all systems thoroughly before launch</li>
+                        </ul>
+                        <div class="step-contact">
+                            <h4>Technology Partners</h4>
+                            <p><strong>Bambi NEMT:</strong> No lock-in contracts, real-time tracking</p>
+                            <p><strong>Alternative:</strong> Tobi Cloud ($50/month per user) or TripMaster (custom pricing)</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-users"></i> Staff Recruitment & Training</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$5K - $10K</span>
+                                <span class="meta-item duration">3-4 weeks</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Hire qualified drivers (EMT preferred, competitive wages essential)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Complete comprehensive driver training program</li>
+                            <li><input type="checkbox" class="step-checkbox"> Train staff on patient care and customer service</li>
+                            <li><input type="checkbox" class="step-checkbox"> Conduct HIPAA and safety training</li>
+                            <li><input type="checkbox" class="step-checkbox"> Document all training completion</li>
+                        </ul>
+                        <div class="step-warning">
+                            <strong>Salary Planning:</strong> EMT annual compensation $40K-$60K | Competitive wages essential for retention
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-handshake"></i> Healthcare Partnerships</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$500 - $2K</span>
+                                <span class="meta-item duration">2-4 weeks</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Contact major hospitals (MUSC, Prisma Health, Bon Secours)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Establish relationships with dialysis centers (DaVita, Fresenius)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Partner with rehabilitation and physical therapy facilities</li>
+                            <li><input type="checkbox" class="step-checkbox"> Connect with assisted living and senior communities</li>
+                            <li><input type="checkbox" class="step-checkbox"> Negotiate service contracts and pricing agreements</li>
+                        </ul>
+                        <div class="step-contact">
+                            <h4>Partnership Strategy</h4>
+                            <p><strong>Focus:</strong> Direct relationships bypass Medicaid-only limitations</p>
+                            <p><strong>Revenue Impact:</strong> Private contracts can command premium pricing</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 5: Launch Operations -->
+            <section id="phase5" class="phase">
+                <div class="phase-header">
+                    <h2><i class="fas fa-rocket"></i> Phase 5: Launch Operations</h2>
+                    <div class="phase-duration">Month 4-5</div>
+                </div>
+                <div class="phase-content">
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-play"></i> Service Launch</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$2K - $5K marketing</span>
+                                <span class="meta-item duration">2 weeks</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Begin accepting transportation requests</li>
+                            <li><input type="checkbox" class="step-checkbox"> Start with limited geographic area and scale gradually</li>
+                            <li><input type="checkbox" class="step-checkbox"> Monitor service quality and customer satisfaction</li>
+                            <li><input type="checkbox" class="step-checkbox"> Track key performance metrics daily</li>
+                            <li><input type="checkbox" class="step-checkbox"> Address operational issues immediately</li>
+                        </ul>
+                        <div class="milestone">
+                            <h3><i class="fas fa-flag-checkered"></i> Launch Goal</h3>
+                            <p>Target: 50+ trips per month within first 30 days</p>
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-chart-line"></i> Performance Monitoring</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$200 - $500</span>
+                                <span class="meta-item duration">Ongoing</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Track vehicle utilization (target: >40% vs 35% industry average)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Monitor on-time performance (target: >95%)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Measure customer satisfaction (target: >95%)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Analyze profit margins monthly (target: 20-30%)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Review cash flow weekly</li>
+                        </ul>
+                        <div class="step-warning">
+                            <strong>Critical Success Factor:</strong> Vehicle utilization above 35% industry average is essential for profitability.
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-dollar-sign"></i> Revenue Optimization</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">Ongoing</span>
+                                <span class="meta-item duration">Month 1-3</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Diversify payer mix beyond Medicaid (target: 60% Medicaid, 40% other)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Negotiate premium rates for specialty services</li>
+                            <li><input type="checkbox" class="step-checkbox"> Optimize scheduling to maximize trips per vehicle per day</li>
+                            <li><input type="checkbox" class="step-checkbox"> Implement dynamic pricing for non-contract services</li>
+                            <li><input type="checkbox" class="step-checkbox"> Focus on high-value services (dialysis, specialty appointments)</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-balance-scale"></i> Break-Even Analysis</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">Target: Month 2-3</span>
+                                <span class="meta-item duration">Ongoing monitoring</span>
+                                <span class="meta-item priority-high">High Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Achieve 155+ monthly trips per vehicle for break-even</li>
+                            <li><input type="checkbox" class="step-checkbox"> Maintain 5-8 daily trips per vehicle average</li>
+                            <li><input type="checkbox" class="step-checkbox"> Monitor monthly operating expenses vs revenue</li>
+                            <li><input type="checkbox" class="step-checkbox"> Adjust operations based on profitability analysis</li>
+                            <li><input type="checkbox" class="step-checkbox"> Plan for 18-24 month full ROI recovery</li>
+                        </ul>
+                        <div class="milestone">
+                            <h3><i class="fas fa-chart-pie"></i> Break-Even Target</h3>
+                            <p>155 trips/month per vehicle = 5-8 trips/day = Break-even operations</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Phase 6: Growth & Expansion -->
+            <section id="phase6" class="phase">
+                <div class="phase-header">
+                    <h2><i class="fas fa-expand-arrows-alt"></i> Phase 6: Growth & Expansion</h2>
+                    <div class="phase-duration">Month 6+</div>
+                </div>
+                <div class="phase-content">
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-plus-circle"></i> Fleet Expansion</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$40K - $80K per vehicle</span>
+                                <span class="meta-item duration">2-3 months</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Evaluate demand for additional vehicles</li>
+                            <li><input type="checkbox" class="step-checkbox"> Secure financing for fleet expansion</li>
+                            <li><input type="checkbox" class="step-checkbox"> Hire and train additional drivers</li>
+                            <li><input type="checkbox" class="step-checkbox"> Expand service area to adjacent counties</li>
+                            <li><input type="checkbox" class="step-checkbox"> Consider specialty vehicle types (bariatric, pediatric)</li>
+                        </ul>
+                        <div class="dependency-alert">
+                            <strong>Expansion Trigger:</strong> Only expand when existing vehicles achieve >40% utilization consistently.
+                        </div>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-map-marked-alt"></i> Geographic Expansion</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$5K - $15K per county</span>
+                                <span class="meta-item duration">1-2 months per county</span>
+                                <span class="meta-item priority-low">Low Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Research adjacent county markets</li>
+                            <li><input type="checkbox" class="step-checkbox"> Obtain additional licensing if required</li>
+                            <li><input type="checkbox" class="step-checkbox"> Establish partnerships with healthcare facilities</li>
+                            <li><input type="checkbox" class="step-checkbox"> Market services to new geographic area</li>
+                            <li><input type="checkbox" class="step-checkbox"> Monitor profitability by county</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-star"></i> Service Enhancement</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">$10K - $25K</span>
+                                <span class="meta-item duration">3-6 months</span>
+                                <span class="meta-item priority-medium">Medium Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Add specialty services (bariatric, pediatric, behavioral health)</li>
+                            <li><input type="checkbox" class="step-checkbox"> Implement advanced scheduling optimization</li>
+                            <li><input type="checkbox" class="step-checkbox"> Develop mobile patient apps</li>
+                            <li><input type="checkbox" class="step-checkbox"> Add 24/7 emergency transport capability</li>
+                            <li><input type="checkbox" class="step-checkbox"> Explore telehealth transport integration</li>
+                        </ul>
+                    </div>
+
+                    <div class="step">
+                        <div class="step-header">
+                            <h3><i class="fas fa-graduation-cap"></i> Long-term Strategic Development</h3>
+                            <div class="step-meta">
+                                <span class="meta-item cost">Varies</span>
+                                <span class="meta-item duration">Year 2+</span>
+                                <span class="meta-item priority-low">Low Priority</span>
+                            </div>
+                        </div>
+                        <ul class="step-actions">
+                            <li><input type="checkbox" class="step-checkbox"> Consider acquisition of smaller competitors</li>
+                            <li><input type="checkbox" class="step-checkbox"> Evaluate franchise opportunities</li>
+                            <li><input type="checkbox" class="step-checkbox"> Explore technology licensing and white-label services</li>
+                            <li><input type="checkbox" class="step-checkbox"> Develop training programs for other operators</li>
+                            <li><input type="checkbox" class="step-checkbox"> Consider IPO or private equity partnership for major expansion</li>
+                        </ul>
+                        <div class="milestone">
+                            <h3><i class="fas fa-trophy"></i> Long-term Vision</h3>
+                            <p>Year 3-5: Regional leader with 10+ vehicles, $1M+ revenue, market expansion opportunities</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Calculate days remaining until January 15, 2026
+        function updateDaysRemaining() {
+            const deadline = new Date('2026-01-15');
+            const now = new Date();
+            const diffTime = deadline - now;
+            const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+            const element = document.getElementById('daysRemaining');
+            if (element) {
+                element.textContent = Math.max(0, diffDays);
+                if (diffDays <= 0) {
+                    element.parentElement.innerHTML = '<h3>⏰ DEADLINE PASSED</h3><p>Federal Lands Highway funding deadline has passed</p>';
+                }
+            }
+        }
+
+        // Progress tracking
+        function updateProgress() {
+            const checkboxes = document.querySelectorAll('.step-checkbox');
+            const total = checkboxes.length;
+            const completed = Array.from(checkboxes).filter(cb => cb.checked).length;
+            const percentage = total > 0 ? Math.round((completed / total) * 100) : 0;
+
+            document.getElementById('totalSteps').textContent = total;
+            document.getElementById('completedSteps').textContent = completed;
+            document.getElementById('progressFill').style.width = percentage + '%';
+            document.getElementById('progressPercentage').textContent = percentage + '%';
+
+            // Store progress in localStorage
+            const progress = Array.from(checkboxes).map(cb => cb.checked);
+            localStorage.setItem('medicalTransportProgress', JSON.stringify(progress));
+        }
+
+        // Load saved progress
+        function loadProgress() {
+            const saved = localStorage.getItem('medicalTransportProgress');
+            if (saved) {
+                const progress = JSON.parse(saved);
+                const checkboxes = document.querySelectorAll('.step-checkbox');
+                checkboxes.forEach((cb, index) => {
+                    if (progress[index]) {
+                        cb.checked = true;
+                        markStepComplete(cb);
+                    }
+                });
+            }
+        }
+
+        // Mark step as complete visually
+        function markStepComplete(checkbox) {
+            const step = checkbox.closest('.step');
+            if (checkbox.checked) {
+                step.style.opacity = '0.8';
+                step.style.backgroundColor = '#d4edda';
+                checkbox.closest('li').style.textDecoration = 'line-through';
+            } else {
+                step.style.opacity = '1';
+                step.style.backgroundColor = '';
+                checkbox.closest('li').style.textDecoration = 'none';
+            }
+        }
+
+        // Smooth navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                this.classList.add('active');
+
+                const targetId = this.getAttribute('href');
+                const target = document.querySelector(targetId);
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+
+        // Update active nav on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.phase, #overview');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (window.scrollY >= sectionTop) {
+                    current = '#' + section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Initialize
+        document.addEventListener('DOMContentLoaded', function() {
+            updateDaysRemaining();
+            loadProgress();
+            updateProgress();
+
+            // Add event listeners to checkboxes
+            document.querySelectorAll('.step-checkbox').forEach(checkbox => {
+                checkbox.addEventListener('change', function() {
+                    markStepComplete(this);
+                    updateProgress();
+                });
+            });
+
+            // Update countdown every hour
+            setInterval(updateDaysRemaining, 3600000);
+        });
+
+        // Print functionality
+        function printPhase(phaseId) {
+            const phase = document.querySelector(phaseId);
+            const printWindow = window.open('', '', 'width=800,height=600');
+            printWindow.document.write(`
+                <html>
+                <head>
+                    <title>Medical Transportation Startup - ${phase.querySelector('h2').textContent}</title>
+                    <style>
+                        body { font-family: Arial, sans-serif; margin: 20px; }
+                        .step { margin: 20px 0; padding: 15px; border-left: 4px solid #3498db; }
+                        .step h3 { color: #2c3e50; }
+                        ul { margin: 10px 0; }
+                        .step-contact { background: #f0f0f0; padding: 10px; margin: 10px 0; }
+                    </style>
+                </head>
+                <body>${phase.innerHTML}</body>
+                </html>
+            `);
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        // Add print buttons to each phase
+        document.querySelectorAll('.phase').forEach(phase => {
+            const printBtn = document.createElement('button');
+            printBtn.textContent = 'Print Phase';
+            printBtn.className = 'btn';
+            printBtn.style.cssText = 'float: right; margin-top: -50px; margin-right: 20px;';
+            printBtn.onclick = () => printPhase('#' + phase.id);
+            phase.querySelector('.phase-header').appendChild(printBtn);
+        });
+
+        // Export progress as PDF-ready format
+        function exportProgress() {
+            const completed = Array.from(document.querySelectorAll('.step-checkbox')).filter(cb => cb.checked);
+            const report = completed.map(cb => cb.closest('li').textContent.trim()).join('\n');
+            const blob = new Blob([`Medical Transportation Startup Progress Report\n\nCompleted Tasks:\n${report}`], {type: 'text/plain'});
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = 'medical-transport-progress.txt';
+            a.click();
+        }
+
+        // Add export button to progress tracker
+        const exportBtn = document.createElement('button');
+        exportBtn.textContent = 'Export Progress';
+        exportBtn.className = 'btn';
+        exportBtn.style.cssText = 'width: 100%; margin-top: 10px; padding: 8px;';
+        exportBtn.onclick = exportProgress;
+        document.getElementById('progressTracker').appendChild(exportBtn);
+    </script>
+</body>
+</html>

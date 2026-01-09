@@ -1,0 +1,2054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Carolina Medical Transportation Business - Comprehensive Analysis Report 2026</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.1);
+        }
+
+        .header {
+            background: linear-gradient(135deg, #2c3e50, #3498db);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .nav-menu {
+            background: #34495e;
+            padding: 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-menu ul {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-menu li {
+            margin: 0;
+        }
+
+        .nav-menu a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            transition: background 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+
+        .nav-menu a:hover, .nav-menu a.active {
+            background: #2c3e50;
+            border-bottom-color: #3498db;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            border-left: 5px solid #3498db;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .section h2 {
+            color: #2c3e50;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section h3 {
+            color: #34495e;
+            margin: 1.5rem 0 1rem;
+            font-size: 1.5rem;
+        }
+
+        .section h4 {
+            color: #555;
+            margin: 1rem 0 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-top: 4px solid #3498db;
+        }
+
+        .card h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .metric {
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 1rem 0;
+        }
+
+        .metric h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .metric p {
+            opacity: 0.9;
+        }
+
+        .table-responsive {
+            overflow-x: auto;
+            margin: 1.5rem 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background: #34495e;
+            color: white;
+            font-weight: 600;
+        }
+
+        tr:hover {
+            background: #f5f5f5;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        .status-high { background: #e74c3c; color: white; }
+        .status-medium { background: #f39c12; color: white; }
+        .status-low { background: #27ae60; color: white; }
+        .status-info { background: #3498db; color: white; }
+
+        .timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #3498db;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2rem;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -1.75rem;
+            top: 1.5rem;
+            width: 12px;
+            height: 12px;
+            background: #3498db;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .progress-bar {
+            background: #ecf0f1;
+            height: 8px;
+            border-radius: 4px;
+            margin: 1rem 0;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #3498db, #2980b9);
+            transition: width 0.3s ease;
+        }
+
+        .alert {
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 4px solid;
+        }
+
+        .alert-info {
+            background: #d1ecf1;
+            border-color: #17a2b8;
+            color: #0c5460;
+        }
+
+        .alert-warning {
+            background: #fff3cd;
+            border-color: #ffc107;
+            color: #856404;
+        }
+
+        .alert-success {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 1.5rem 0;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            border-left: 4px solid #3498db;
+        }
+
+        .contact-card h4 {
+            color: #2c3e50;
+            margin-bottom: 1rem;
+        }
+
+        .contact-card p {
+            margin: 0.5rem 0;
+            color: #555;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 24px;
+            background: #3498db;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background 0.3s;
+            margin: 0.5rem 0.5rem 0.5rem 0;
+        }
+
+        .btn:hover {
+            background: #2980b9;
+        }
+
+        .btn-success {
+            background: #27ae60;
+        }
+
+        .btn-success:hover {
+            background: #219a52;
+        }
+
+        .btn-warning {
+            background: #f39c12;
+        }
+
+        .btn-warning:hover {
+            background: #e67e22;
+        }
+
+        .checklist {
+            list-style: none;
+        }
+
+        .checklist li {
+            margin: 0.5rem 0;
+            padding: 0.5rem;
+            background: white;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .checklist input[type="checkbox"] {
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                margin: 0;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .nav-menu ul {
+                flex-direction: column;
+            }
+
+            .content {
+                padding: 1rem;
+            }
+
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .print-section {
+            page-break-inside: avoid;
+            page-break-after: auto;
+        }
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .nav-menu {
+                display: none;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-ambulance"></i> Medical Transportation Business</h1>
+            <p>Comprehensive Analysis Report for South Carolina - 2026 Federal Funding Opportunities</p>
+        </div>
+
+        <nav class="nav-menu">
+            <ul>
+                <li><a href="#executive-summary" class="nav-link active">Executive Summary</a></li>
+                <li><a href="#federal-funding" class="nav-link">Federal Funding</a></li>
+                <li><a href="#state-requirements" class="nav-link">SC Requirements</a></li>
+                <li><a href="#market-analysis" class="nav-link">Market Analysis</a></li>
+                <li><a href="#business-plan" class="nav-link">Business Plan</a></li>
+                <li><a href="#financial-projections" class="nav-link">Financials</a></li>
+                <li><a href="#compliance" class="nav-link">Compliance</a></li>
+                <li><a href="#next-steps" class="nav-link">Next Steps</a></li>
+            </ul>
+        </nav>
+
+        <div class="content">
+            <!-- Executive Summary -->
+            <section id="executive-summary" class="section print-section">
+                <h2><i class="fas fa-chart-line"></i> Executive Summary</h2>
+
+                <div class="grid">
+                    <div class="metric">
+                        <h3>$50B+</h3>
+                        <p>Federal Rural Health Funding Available (2026-2030)</p>
+                    </div>
+                    <div class="metric">
+                        <h3>25.3%</h3>
+                        <p>SC Adults 65-74 with Disabilities</p>
+                    </div>
+                    <div class="metric">
+                        <h3>35.3%</h3>
+                        <p>Residents Missing Medical Appointments Due to Transportation</p>
+                    </div>
+                    <div class="metric">
+                        <h3>$30K-$56K</h3>
+                        <p>Annual Revenue Potential per Vehicle</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-success">
+                    <strong><i class="fas fa-check-circle"></i> Key Opportunity:</strong> South Carolina presents an excellent market for medical transportation with strong demographics, federal funding opportunities, and significant unmet transportation needs. The combination of an aging population, rural healthcare challenges, and substantial federal funding through 2030 creates ideal conditions for business success.
+                </div>
+
+                <h3>Business Strengths</h3>
+                <ul>
+                    <li><strong>Strong Market Demand:</strong> Aging population with 46.9% of adults 75+ having disabilities</li>
+                    <li><strong>Federal Support:</strong> $50 billion Rural Health Transformation Program through 2030</li>
+                    <li><strong>Revenue Potential:</strong> $30,000-$56,000 annual revenue per vehicle with 20-30% profit margins</li>
+                    <li><strong>Growth Industry:</strong> Medical transportation growing 7-9% annually through 2030</li>
+                    <li><strong>Multiple Funding Sources:</strong> NEMT, FHWA, HHS, USDA, and SBA programs available</li>
+                </ul>
+
+                <h3>Key Challenges</h3>
+                <ul>
+                    <li><strong>High Startup Costs:</strong> $30,000-$100,000+ initial investment required</li>
+                    <li><strong>Complex Regulations:</strong> Multiple federal and state compliance requirements</li>
+                    <li><strong>Working Capital:</strong> Long reimbursement cycles require substantial cash reserves</li>
+                    <li><strong>Competition:</strong> Modivcare holds dominant Medicaid contract position</li>
+                </ul>
+
+                <h3>Strategic Recommendations</h3>
+                <ol>
+                    <li><strong>Target Rural Markets:</strong> Focus on underserved counties with federal funding support</li>
+                    <li><strong>Diversify Revenue:</strong> Combine Medicaid, private-pay, and facility contracts</li>
+                    <li><strong>Leverage Technology:</strong> Implement scheduling and GPS systems for efficiency</li>
+                    <li><strong>Apply for Federal Funding:</strong> Target NEMT grants and Rural Health programs</li>
+                    <li><strong>Build Healthcare Partnerships:</strong> Establish relationships with hospitals and clinics</li>
+                </ol>
+            </section>
+
+            <!-- Federal Funding Opportunities -->
+            <section id="federal-funding" class="section print-section">
+                <h2><i class="fas fa-dollar-sign"></i> Federal Funding Opportunities</h2>
+
+                <div class="alert alert-info">
+                    <strong><i class="fas fa-info-circle"></i> 2026 Major Initiative:</strong> $50 billion Rural Health Transformation Program represents the largest rural healthcare investment in decades, with $147-281 million average per state including transportation components.
+                </div>
+
+                <h3>NEMT (Non-Emergency Medical Transportation) Programs</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Program</th>
+                                <th>Funding Amount</th>
+                                <th>Federal Share</th>
+                                <th>Deadline</th>
+                                <th>Priority</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>ICAM Pilot Program</td>
+                                <td>$100K - $300K</td>
+                                <td>80%</td>
+                                <td>Rolling</td>
+                                <td><span class="status-badge status-high">High</span></td>
+                            </tr>
+                            <tr>
+                                <td>Section 5310 Enhanced Mobility</td>
+                                <td>Formula-based</td>
+                                <td>80%</td>
+                                <td>Annual</td>
+                                <td><span class="status-badge status-medium">Medium</span></td>
+                            </tr>
+                            <tr>
+                                <td>Rural Transit Grants (5311)</td>
+                                <td>Based on demographics</td>
+                                <td>80%</td>
+                                <td>Annual</td>
+                                <td><span class="status-badge status-medium">Medium</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>FHWA (Federal Highway Administration) Grants</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>BUILD Grant Program</h4>
+                        <p><strong>Deadline:</strong> February 24, 2026</p>
+                        <p><strong>Focus:</strong> Capital investments in surface transportation</p>
+                        <p><strong>Emphasis:</strong> Rural areas and tribal lands</p>
+                        <span class="status-badge status-high">Active</span>
+                    </div>
+                    <div class="card">
+                        <h4>Federal Lands Highway Funding</h4>
+                        <p><strong>Deadline:</strong> January 15, 2026</p>
+                        <p><strong>Purpose:</strong> Infrastructure on federal lands</p>
+                        <p><strong>Target:</strong> Rural communities</p>
+                        <span class="status-badge status-medium">Deadline Soon</span>
+                    </div>
+                    <div class="card">
+                        <h4>Rural Surface Transportation</h4>
+                        <p><strong>Target:</strong> Areas under 200K population</p>
+                        <p><strong>Focus:</strong> Infrastructure improvements</p>
+                        <p><strong>Status:</strong> Ongoing funding available</p>
+                        <span class="status-badge status-info">Available</span>
+                    </div>
+                </div>
+
+                <h3>HHS (Health and Human Services) Funding</h3>
+                <div class="metric">
+                    <h3>$50 Billion</h3>
+                    <p>Rural Health Transformation Program (2026-2030)</p>
+                </div>
+                <ul>
+                    <li><strong>Annual Amount:</strong> $10 billion per year</li>
+                    <li><strong>State Awards:</strong> $147-281 million average per state</li>
+                    <li><strong>Transportation Components:</strong> Mobile healthcare, transport, EMS hubs</li>
+                    <li><strong>HRSA Programs:</strong> Rural health grants with transportation elements</li>
+                </ul>
+
+                <h3>USDA Rural Development Grants</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Program</th>
+                                <th>Amount</th>
+                                <th>Requirement</th>
+                                <th>Next Deadline</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Rural Business Development Grants</td>
+                                <td>$10K - $500K</td>
+                                <td>Towns under 50K population</td>
+                                <td>Rolling</td>
+                            </tr>
+                            <tr>
+                                <td>REDLG Q3 2026</td>
+                                <td>Up to $500K grants</td>
+                                <td>≤50 employees, &lt;$1M revenue</td>
+                                <td>March 31, 2026</td>
+                            </tr>
+                            <tr>
+                                <td>REDLG Q4 2026</td>
+                                <td>Up to $500K grants</td>
+                                <td>≤50 employees, &lt;$1M revenue</td>
+                                <td>June 30, 2026</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>SBA (Small Business Administration) Programs</h3>
+                <div class="alert alert-warning">
+                    <strong><i class="fas fa-exclamation-triangle"></i> 2025-2026 Changes:</strong> New SBA requirements include collateral for loans $50K+ (down from $500K), minimum credit score 165 (up from 155), and 10% equity injection for startups.
+                </div>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>7(a) Loans</h4>
+                        <ul>
+                            <li><strong>Amount:</strong> Up to $5 million</li>
+                            <li><strong>Uses:</strong> Real estate, working capital, equipment</li>
+                            <li><strong>Fees:</strong> 0.25% - 3.75%</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>504 Loans</h4>
+                        <ul>
+                            <li><strong>Amount:</strong> Up to $5 million</li>
+                            <li><strong>Uses:</strong> Fixed assets (land, buildings)</li>
+                            <li><strong>Terms:</strong> Long-term, fixed-rate</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Microloans</h4>
+                        <ul>
+                            <li><strong>Amount:</strong> Up to $50,000</li>
+                            <li><strong>Provider:</strong> Intermediary lenders</li>
+                            <li><strong>Focus:</strong> Small startups</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>2026 Key Application Deadlines</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>January 15, 2026 - Federal Lands Highway Funding</h4>
+                        <p>FHWA infrastructure projects on federal lands. Targets rural and tribal communities.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>February 24, 2026 - BUILD Grants</h4>
+                        <p>FHWA capital investments in unmet surface transportation needs. Rural emphasis.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>March 31, 2026 - USDA REDLG Q3</h4>
+                        <p>Rural Economic Development Loan & Grant Programs. Business development focus.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>June 30, 2026 - USDA REDLG Q4</h4>
+                        <p>Final quarterly deadline for rural business development grants in 2026.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- State Requirements -->
+            <section id="state-requirements" class="section print-section">
+                <h2><i class="fas fa-clipboard-check"></i> South Carolina Requirements</h2>
+
+                <div class="alert alert-info">
+                    <strong><i class="fas fa-info-circle"></i> Key Update:</strong> SCDMV website transitioning to dmv.sc.gov on January 5, 2026. IIJA funding available through September 30, 2026.
+                </div>
+
+                <h3>Licensing Requirements Matrix</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>License Type</th>
+                                <th>Issuing Agency</th>
+                                <th>Requirement</th>
+                                <th>Cost Range</th>
+                                <th>Renewal Period</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>NEMT Provider Certification</td>
+                                <td>SCDHHS</td>
+                                <td>Medicaid recipient service</td>
+                                <td>$500-$1,500</td>
+                                <td>Annual</td>
+                            </tr>
+                            <tr>
+                                <td>Ambulance Service License</td>
+                                <td>SC Dept. of Public Health</td>
+                                <td>Emergency medical services</td>
+                                <td>$1,000-$3,000</td>
+                                <td>Annual</td>
+                            </tr>
+                            <tr>
+                                <td>Commercial Driver's License</td>
+                                <td>SCDMV</td>
+                                <td>Vehicles 26,000+ lbs or 16+ passengers</td>
+                                <td>$200-$500</td>
+                                <td>5 years</td>
+                            </tr>
+                            <tr>
+                                <td>Business Registration</td>
+                                <td>SC Secretary of State</td>
+                                <td>LLC/Corporation formation</td>
+                                <td>$50-$500</td>
+                                <td>Annual</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Vehicle Requirements</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Inspection Standards</h4>
+                        <ul>
+                            <li>Ground Ambulance Self Inspection Report required</li>
+                            <li>Equipment must meet basic, intermediate, advanced life support standards</li>
+                            <li>Regular inspections with deficiency correction</li>
+                            <li>Point value system for violations</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>ADA Compliance</h4>
+                        <ul>
+                            <li>Wheelchair accessibility required for NEMT vehicles</li>
+                            <li>Proper safety equipment specifications</li>
+                            <li>Vehicle markings and identification</li>
+                            <li>Americans with Disabilities Act compliance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Driver Certification Requirements</h3>
+                <ul class="checklist">
+                    <li><input type="checkbox"> Valid driver's license (commercial if applicable)</li>
+                    <li><input type="checkbox"> First Aid and CPR certification</li>
+                    <li><input type="checkbox"> Background checks mandatory</li>
+                    <li><input type="checkbox"> Medical certification for CDL holders</li>
+                    <li><input type="checkbox"> EMS personnel certification through SC Bureau of EMS</li>
+                    <li><input type="checkbox"> Patient care training specific to medical transportation</li>
+                </ul>
+
+                <h3>Insurance Requirements</h3>
+                <div class="metric">
+                    <h3>25/50/25</h3>
+                    <p>Minimum Commercial Auto Insurance (in thousands)</p>
+                </div>
+                <ul>
+                    <li><strong>Basic Coverage:</strong> $25,000 per person, $50,000 per accident bodily injury, $25,000 property damage</li>
+                    <li><strong>Commercial Auto:</strong> Required for fee-based transportation</li>
+                    <li><strong>General Liability:</strong> Coverage varies by contract</li>
+                    <li><strong>Premium Range:</strong> $4,000-$11,000 per vehicle annually</li>
+                    <li><strong>Enhanced Requirements:</strong> Higher coverage limits for Medicaid contractors</li>
+                </ul>
+
+                <h3>State Funding Programs</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>SCDOT Transportation Funding</h4>
+                        <ul>
+                            <li>Section 5310 program for elderly and disabled</li>
+                            <li>Section 5337 transit asset rehabilitation</li>
+                            <li>State Motor Fuel Tax Fund (SMTF)</li>
+                            <li>IIJA grants through September 30, 2026</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Federal Transit Administration</h4>
+                        <ul>
+                            <li>NEMT funding programs</li>
+                            <li>Grant opportunities through USDOT Navigator</li>
+                            <li>Rural transit assistance programs</li>
+                            <li>Equipment and operational funding</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Key Regulatory Agency Contacts</h3>
+                <div class="contact-grid">
+                    <div class="contact-card">
+                        <h4>SC Department of Health and Human Services</h4>
+                        <p><strong>Address:</strong> 1801 Main Street, Columbia, SC 29202</p>
+                        <p><strong>Phone:</strong> (803) 898-2500</p>
+                        <p><strong>Toll Free:</strong> (800) 868-9095</p>
+                        <p><strong>Email:</strong> info@scdhhs.gov</p>
+                        <p><strong>Fraud Hotline:</strong> (888) 364-3224</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>SC Department of Transportation</h4>
+                        <p><strong>Address:</strong> 955 Park Street, Columbia, SC 29202</p>
+                        <p><strong>Phone:</strong> (855) 467-2368</p>
+                        <p><strong>Main:</strong> (803) 737-1200</p>
+                        <p><strong>Website:</strong> scdot.org</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>SC Department of Public Health EMS</h4>
+                        <p><strong>Address:</strong> 2600 Bull Street, Columbia, SC 29201</p>
+                        <p><strong>Phone:</strong> (803) 898-3432</p>
+                        <p><strong>Email:</strong> info@dhec.sc.gov</p>
+                        <p><strong>Website:</strong> dph.sc.gov</p>
+                    </div>
+                    <div class="contact-card">
+                        <h4>SC Department of Motor Vehicles</h4>
+                        <p><strong>Columbia - Shop Road:</strong> 1630 Shop Road</p>
+                        <p><strong>Phone:</strong> (803) 737-8350</p>
+                        <p><strong>Hours:</strong> M-F 8:30 a.m.-5:00 p.m.</p>
+                        <p><strong>Website:</strong> dmv.sc.gov (new as of Jan 5, 2026)</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Market Analysis -->
+            <section id="market-analysis" class="section print-section">
+                <h2><i class="fas fa-chart-bar"></i> Market Analysis</h2>
+
+                <h3>Demographics & Market Opportunity</h3>
+                <div class="grid">
+                    <div class="metric">
+                        <h3>357,526</h3>
+                        <p>SC Residents Age 60-64 (Largest Age Group)</p>
+                    </div>
+                    <div class="metric">
+                        <h3>25.3%</h3>
+                        <p>Adults 65-74 with Disabilities</p>
+                    </div>
+                    <div class="metric">
+                        <h3>46.9%</h3>
+                        <p>Adults 75+ with Disabilities</p>
+                    </div>
+                    <div class="metric">
+                        <h3>41,310</h3>
+                        <p>New Healthcare Jobs Projected</p>
+                    </div>
+                </div>
+
+                <div class="alert alert-success">
+                    <strong><i class="fas fa-trending-up"></i> Market Opportunity:</strong> Strong aging population demographics with the largest age group (60-64) indicating substantial future demand. Healthcare sector experiencing massive expansion with 41,310 new jobs projected.
+                </div>
+
+                <h3>Transportation Barriers & Unmet Need</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Barrier Type</th>
+                                <th>Percentage Affected</th>
+                                <th>Market Opportunity</th>
+                                <th>Priority Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Delayed/Missed Appointments</td>
+                                <td>35.3% of residents</td>
+                                <td>High</td>
+                                <td><span class="status-badge status-high">Critical</span></td>
+                            </tr>
+                            <tr>
+                                <td>Rural Healthcare Access</td>
+                                <td>Rural counties underserved</td>
+                                <td>High</td>
+                                <td><span class="status-badge status-high">Critical</span></td>
+                            </tr>
+                            <tr>
+                                <td>Disability Transportation</td>
+                                <td>25.3% - 46.9% by age group</td>
+                                <td>High</td>
+                                <td><span class="status-badge status-high">Critical</span></td>
+                            </tr>
+                            <tr>
+                                <td>Uninsured Population</td>
+                                <td>9.0% uninsured rate</td>
+                                <td>Medium</td>
+                                <td><span class="status-badge status-medium">Moderate</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Competitive Landscape</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Market Leader: Modivcare</h4>
+                        <ul>
+                            <li><strong>Position:</strong> Primary Medicaid contract through SCDHHS</li>
+                            <li><strong>Coverage:</strong> Statewide NEMT services</li>
+                            <li><strong>Service:</strong> Free door-to-door for Medicaid recipients</li>
+                            <li><strong>Booking:</strong> 3 business days advance scheduling required</li>
+                        </ul>
+                        <span class="status-badge status-high">Dominant Player</span>
+                    </div>
+                    <div class="card">
+                        <h4>Established Competitors</h4>
+                        <ul>
+                            <li><strong>Smart Transportation:</strong> 50+ vehicles, established presence</li>
+                            <li><strong>Guardian Angels:</strong> Regional medical transport</li>
+                            <li><strong>Uber Health:</strong> Technology-enabled, major cities</li>
+                            <li><strong>Local Providers:</strong> Smaller regional operators</li>
+                        </ul>
+                        <span class="status-badge status-medium">Moderate Competition</span>
+                    </div>
+                </div>
+
+                <h3>Pricing Model Analysis</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Service Type</th>
+                                <th>Standard Rate</th>
+                                <th>Long Distance</th>
+                                <th>Market Position</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Basic NEMT Transport</td>
+                                <td>$1-3 per mile</td>
+                                <td>$2-8 per mile</td>
+                                <td>Competitive</td>
+                            </tr>
+                            <tr>
+                                <td>Wheelchair Transport</td>
+                                <td>$50+ per trip</td>
+                                <td>$100+ per trip</td>
+                                <td>Premium</td>
+                            </tr>
+                            <tr>
+                                <td>Dialysis Transportation</td>
+                                <td>$40-60 (Medicaid)</td>
+                                <td>$75-150 (Private)</td>
+                                <td>High Volume</td>
+                            </tr>
+                            <tr>
+                                <td>Specialty Services</td>
+                                <td>$75-150 per trip</td>
+                                <td>$150+ per trip</td>
+                                <td>Premium</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Revenue Opportunities by Payer Type</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Medicaid (Primary)</h4>
+                        <ul>
+                            <li><strong>Coverage:</strong> Comprehensive NEMT through Modivcare network</li>
+                            <li><strong>Volume:</strong> High, steady demand</li>
+                            <li><strong>Reimbursement:</strong> Standardized rates</li>
+                            <li><strong>Requirements:</strong> SCDHHS certification mandatory</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Medicare (Limited)</h4>
+                        <ul>
+                            <li><strong>Coverage:</strong> Ambulance services only</li>
+                            <li><strong>2026 Update:</strong> Medicare Advantage adding transportation benefits</li>
+                            <li><strong>Opportunity:</strong> Growing market with plan expansions</li>
+                            <li><strong>Reimbursement:</strong> Higher rates than Medicaid</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Private Pay (Growing)</h4>
+                        <ul>
+                            <li><strong>Market:</strong> 9.0% uninsured rate</li>
+                            <li><strong>Demand:</strong> Increasing chronic care needs</li>
+                            <li><strong>Rates:</strong> Premium pricing possible</li>
+                            <li><strong>Services:</strong> Specialty and convenience transport</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Strategic Market Recommendations</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>1. Target Rural Counties</h4>
+                        <p>Focus on underserved areas with federal funding support and limited competition. Rural emphasis in multiple federal programs provides funding advantage.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>2. Develop Healthcare Partnerships</h4>
+                        <p>Build direct relationships with hospitals, dialysis centers, and specialty clinics for consistent referral volume and premium pricing.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>3. Invest in Technology</h4>
+                        <p>Implement provider dashboards and scheduling systems for healthcare facility integration and operational efficiency.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>4. Offer Specialized Services</h4>
+                        <p>Bariatric transport, pediatric care, and behavioral health transport command premium pricing and reduce competition.</p>
+                    </div>
+                </div>
+
+                <h3>Market Growth Projections</h3>
+                <div class="alert alert-info">
+                    <strong><i class="fas fa-chart-line"></i> Industry Growth:</strong> Medical transportation industry growing 7-9% annually through 2030. Global market projected to grow from $102.9 billion (2024) to $137.1 billion (2030). U.S. NEMT market specifically growing from $11.80 billion (2025) to $17.99 billion (2030) at 8.81% CAGR.
+                </div>
+            </section>
+
+            <!-- Business Plan -->
+            <section id="business-plan" class="section print-section">
+                <h2><i class="fas fa-clipboard-list"></i> Business Plan Framework</h2>
+
+                <h3>Business Model Options</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Medicaid-Focused Model</h4>
+                        <ul>
+                            <li><strong>Target:</strong> Medicaid recipients through network partnerships</li>
+                            <li><strong>Advantages:</strong> Steady volume, established reimbursement</li>
+                            <li><strong>Challenges:</strong> Lower margins (10-15%), regulatory compliance</li>
+                            <li><strong>Capital Needs:</strong> $40,000-$80,000 initial investment</li>
+                        </ul>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 60%;"></div>
+                        </div>
+                        <small>Recommended for new operators</small>
+                    </div>
+                    <div class="card">
+                        <h4>Diversified Payer Model</h4>
+                        <ul>
+                            <li><strong>Target:</strong> Medicaid + private-pay + facility contracts</li>
+                            <li><strong>Advantages:</strong> Higher margins (20-30%), reduced risk</li>
+                            <li><strong>Challenges:</strong> Marketing needs, complex billing</li>
+                            <li><strong>Capital Needs:</strong> $80,000-$150,000 initial investment</li>
+                        </ul>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 85%;"></div>
+                        </div>
+                        <small>Optimal for profitability</small>
+                    </div>
+                    <div class="card">
+                        <h4>Premium Specialty Model</h4>
+                        <ul>
+                            <li><strong>Target:</strong> Specialized services (bariatric, pediatric, behavioral)</li>
+                            <li><strong>Advantages:</strong> Premium pricing, reduced competition</li>
+                            <li><strong>Challenges:</strong> Limited volume, specialized equipment</li>
+                            <li><strong>Capital Needs:</strong> $100,000-$200,000 initial investment</li>
+                        </ul>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 75%;"></div>
+                        </div>
+                        <small>High-margin niche</small>
+                    </div>
+                </div>
+
+                <h3>Strategic Objectives</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Objective</th>
+                                <th>Year 1 Target</th>
+                                <th>Year 2 Target</th>
+                                <th>Year 3 Target</th>
+                                <th>Success Metric</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vehicle Fleet Size</td>
+                                <td>1-2 vehicles</td>
+                                <td>3-5 vehicles</td>
+                                <td>5-8 vehicles</td>
+                                <td>Fleet utilization >35%</td>
+                            </tr>
+                            <tr>
+                                <td>Annual Revenue</td>
+                                <td>$30K-$56K per vehicle</td>
+                                <td>$150K-$280K total</td>
+                                <td>$250K-$450K total</td>
+                                <td>7-9% annual growth</td>
+                            </tr>
+                            <tr>
+                                <td>Profit Margin</td>
+                                <td>10-15%</td>
+                                <td>15-20%</td>
+                                <td>20-30%</td>
+                                <td>Industry benchmark achievement</td>
+                            </tr>
+                            <tr>
+                                <td>Market Coverage</td>
+                                <td>1-2 counties</td>
+                                <td>3-4 counties</td>
+                                <td>5+ counties</td>
+                                <td>Geographic diversification</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Operational Strategy</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Geographic Focus</h4>
+                        <ul>
+                            <li><strong>Primary Markets:</strong> Rural counties with limited competition</li>
+                            <li><strong>Secondary Markets:</strong> Urban areas with specialty services</li>
+                            <li><strong>Federal Funding Alignment:</strong> Target areas eligible for rural health grants</li>
+                            <li><strong>Expansion Strategy:</strong> Adjacent county growth model</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Service Differentiation</h4>
+                        <ul>
+                            <li><strong>Technology Integration:</strong> Real-time tracking, mobile apps</li>
+                            <li><strong>Customer Service:</strong> Bilingual staff, cultural sensitivity</li>
+                            <li><strong>Specialized Equipment:</strong> Bariatric, pediatric, behavioral health</li>
+                            <li><strong>Partnership Model:</strong> Healthcare facility integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Risk Assessment & Mitigation</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Risk Factor</th>
+                                <th>Probability</th>
+                                <th>Impact</th>
+                                <th>Mitigation Strategy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Regulatory Changes</td>
+                                <td><span class="status-badge status-medium">Medium</span></td>
+                                <td><span class="status-badge status-high">High</span></td>
+                                <td>Professional legal counsel, industry associations</td>
+                            </tr>
+                            <tr>
+                                <td>Reimbursement Delays</td>
+                                <td><span class="status-badge status-high">High</span></td>
+                                <td><span class="status-badge status-high">High</span></td>
+                                <td>Substantial working capital, factoring services</td>
+                            </tr>
+                            <tr>
+                                <td>Vehicle Breakdown</td>
+                                <td><span class="status-badge status-medium">Medium</span></td>
+                                <td><span class="status-badge status-medium">Medium</span></td>
+                                <td>Preventive maintenance, backup vehicle arrangements</td>
+                            </tr>
+                            <tr>
+                                <td>Competition</td>
+                                <td><span class="status-badge status-medium">Medium</span></td>
+                                <td><span class="status-badge status-medium">Medium</span></td>
+                                <td>Service differentiation, technology advantage</td>
+                            </tr>
+                            <tr>
+                                <td>Staff Turnover</td>
+                                <td><span class="status-badge status-high">High</span></td>
+                                <td><span class="status-badge status-medium">Medium</span></td>
+                                <td>Competitive compensation, training programs</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Technology Infrastructure Requirements</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Essential Systems</h4>
+                        <ul>
+                            <li><strong>Scheduling Software:</strong> Bambi NEMT ($69/month per vehicle)</li>
+                            <li><strong>GPS Tracking:</strong> Real-time vehicle monitoring</li>
+                            <li><strong>Communication:</strong> Driver mobile apps, dispatch system</li>
+                            <li><strong>Billing:</strong> Insurance claims processing integration</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Advanced Features</h4>
+                        <ul>
+                            <li><strong>Route Optimization:</strong> Fuel efficiency, time management</li>
+                            <li><strong>Patient Management:</strong> Medical information security</li>
+                            <li><strong>Reporting:</strong> Performance metrics, compliance tracking</li>
+                            <li><strong>Integration:</strong> Healthcare facility systems</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Quality Management Framework</h3>
+                <div class="alert alert-info">
+                    <strong><i class="fas fa-award"></i> Quality Focus:</strong> Success depends on exceeding 35% industry average vehicle utilization through operational efficiency, technology investment, and superior customer service.
+                </div>
+                <ul class="checklist">
+                    <li><input type="checkbox"> Driver training and certification programs</li>
+                    <li><input type="checkbox"> Vehicle maintenance and safety protocols</li>
+                    <li><input type="checkbox"> Customer service standards and feedback systems</li>
+                    <li><input type="checkbox"> HIPAA compliance and patient privacy protection</li>
+                    <li><input type="checkbox"> Performance metrics and continuous improvement</li>
+                    <li><input type="checkbox"> Emergency response procedures and backup plans</li>
+                </ul>
+            </section>
+
+            <!-- Financial Projections -->
+            <section id="financial-projections" class="section print-section">
+                <h2><i class="fas fa-calculator"></i> Financial Projections</h2>
+
+                <h3>Startup Investment Analysis</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Conservative Startup (1 Vehicle)</h4>
+                        <ul>
+                            <li><strong>Vehicle (used wheelchair van):</strong> $35,000</li>
+                            <li><strong>Equipment & modifications:</strong> $5,000</li>
+                            <li><strong>Licensing & permits:</strong> $2,000</li>
+                            <li><strong>Insurance deposit:</strong> $5,000</li>
+                            <li><strong>Technology setup:</strong> $3,000</li>
+                            <li><strong>Working capital:</strong> $15,000</li>
+                        </ul>
+                        <div class="metric">
+                            <h3>$65,000</h3>
+                            <p>Total Investment</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h4>Aggressive Startup (2 Vehicles)</h4>
+                        <ul>
+                            <li><strong>Vehicles (1 new, 1 used):</strong> $70,000</li>
+                            <li><strong>Equipment & modifications:</strong> $10,000</li>
+                            <li><strong>Licensing & permits:</strong> $3,000</li>
+                            <li><strong>Insurance deposits:</strong> $10,000</li>
+                            <li><strong>Technology & office:</strong> $7,000</li>
+                            <li><strong>Working capital:</strong> $30,000</li>
+                        </ul>
+                        <div class="metric">
+                            <h3>$130,000</h3>
+                            <p>Total Investment</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Revenue Projections (Per Vehicle)</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Revenue Stream</th>
+                                <th>Monthly Trips</th>
+                                <th>Rate per Trip</th>
+                                <th>Monthly Revenue</th>
+                                <th>Annual Revenue</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Medicaid NEMT</td>
+                                <td>80</td>
+                                <td>$35</td>
+                                <td>$2,800</td>
+                                <td>$33,600</td>
+                            </tr>
+                            <tr>
+                                <td>Dialysis Transport</td>
+                                <td>40</td>
+                                <td>$50</td>
+                                <td>$2,000</td>
+                                <td>$24,000</td>
+                            </tr>
+                            <tr>
+                                <td>Private Pay</td>
+                                <td>20</td>
+                                <td>$75</td>
+                                <td>$1,500</td>
+                                <td>$18,000</td>
+                            </tr>
+                            <tr>
+                                <td>Facility Contracts</td>
+                                <td>15</td>
+                                <td>$60</td>
+                                <td>$900</td>
+                                <td>$10,800</td>
+                            </tr>
+                            <tr style="font-weight: bold; background: #e8f4fd;">
+                                <td>Total Per Vehicle</td>
+                                <td>155</td>
+                                <td>$46.45 avg</td>
+                                <td>$7,200</td>
+                                <td>$86,400</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Operating Expenses (Annual)</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Single Vehicle Operation</h4>
+                        <ul>
+                            <li><strong>Driver salary & benefits:</strong> $45,000</li>
+                            <li><strong>Vehicle insurance:</strong> $7,500</li>
+                            <li><strong>Fuel & maintenance:</strong> $8,000</li>
+                            <li><strong>Technology/Software:</strong> $2,400</li>
+                            <li><strong>General liability insurance:</strong> $3,000</li>
+                            <li><strong>Licensing & fees:</strong> $2,000</li>
+                            <li><strong>Administrative expenses:</strong> $6,000</li>
+                        </ul>
+                        <div class="metric">
+                            <h3>$73,900</h3>
+                            <p>Annual Operating Costs</p>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <h4>Two Vehicle Operation</h4>
+                        <ul>
+                            <li><strong>Driver salaries & benefits:</strong> $90,000</li>
+                            <li><strong>Vehicle insurance:</strong> $15,000</li>
+                            <li><strong>Fuel & maintenance:</strong> $16,000</li>
+                            <li><strong>Technology/Software:</strong> $4,800</li>
+                            <li><strong>General liability insurance:</strong> $5,000</li>
+                            <li><strong>Licensing & fees:</strong> $3,000</li>
+                            <li><strong>Administrative expenses:</strong> $12,000</li>
+                        </ul>
+                        <div class="metric">
+                            <h3>$145,800</h3>
+                            <p>Annual Operating Costs</p>
+                        </div>
+                    </div>
+                </div>
+
+                <h3>Profitability Analysis</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Scenario</th>
+                                <th>Annual Revenue</th>
+                                <th>Operating Costs</th>
+                                <th>Net Income</th>
+                                <th>Profit Margin</th>
+                                <th>ROI</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Conservative (1 Vehicle)</td>
+                                <td>$86,400</td>
+                                <td>$73,900</td>
+                                <td>$12,500</td>
+                                <td>14.5%</td>
+                                <td>19.2%</td>
+                            </tr>
+                            <tr>
+                                <td>Moderate (1 Vehicle Optimized)</td>
+                                <td>$100,000</td>
+                                <td>$73,900</td>
+                                <td>$26,100</td>
+                                <td>26.1%</td>
+                                <td>40.2%</td>
+                            </tr>
+                            <tr style="background: #e8f6f0;">
+                                <td>Aggressive (2 Vehicles)</td>
+                                <td>$172,800</td>
+                                <td>$145,800</td>
+                                <td>$27,000</td>
+                                <td>15.6%</td>
+                                <td>20.8%</td>
+                            </tr>
+                            <tr style="background: #e8f6f0;">
+                                <td>Optimized (2 Vehicles)</td>
+                                <td>$200,000</td>
+                                <td>$145,800</td>
+                                <td>$54,200</td>
+                                <td>27.1%</td>
+                                <td>41.7%</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Cash Flow Analysis</h3>
+                <div class="alert alert-warning">
+                    <strong><i class="fas fa-exclamation-triangle"></i> Working Capital Warning:</strong> Medical transportation businesses typically experience 30-90 day reimbursement cycles. Substantial working capital ($853,000 recommended for ambulance services) required for sustainability during growth phases.
+                </div>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Month</th>
+                                <th>Revenue</th>
+                                <th>Expenses</th>
+                                <th>Net Cash Flow</th>
+                                <th>Cumulative Cash</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Month 1-3</td>
+                                <td>$15,000</td>
+                                <td>$18,000</td>
+                                <td>-$3,000</td>
+                                <td>$12,000</td>
+                            </tr>
+                            <tr>
+                                <td>Month 4-6</td>
+                                <td>$21,000</td>
+                                <td>$18,500</td>
+                                <td>$2,500</td>
+                                <td>$14,500</td>
+                            </tr>
+                            <tr>
+                                <td>Month 7-9</td>
+                                <td>$25,000</td>
+                                <td>$19,000</td>
+                                <td>$6,000</td>
+                                <td>$20,500</td>
+                            </tr>
+                            <tr>
+                                <td>Month 10-12</td>
+                                <td>$28,000</td>
+                                <td>$19,500</td>
+                                <td>$8,500</td>
+                                <td>$29,000</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Break-Even Analysis</h3>
+                <div class="grid">
+                    <div class="metric">
+                        <h3>155</h3>
+                        <p>Monthly Trips Required to Break Even</p>
+                    </div>
+                    <div class="metric">
+                        <h3>5-8</h3>
+                        <p>Daily Trips per Vehicle</p>
+                    </div>
+                    <div class="metric">
+                        <h3>18-24</h3>
+                        <p>Months to Full ROI Recovery</p>
+                    </div>
+                    <div class="metric">
+                        <h3>35%+</h3>
+                        <p>Required Vehicle Utilization</p>
+                    </div>
+                </div>
+
+                <h3>Funding Strategy Recommendations</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Phase 1: Federal Grant Applications</h4>
+                        <p><strong>Target:</strong> $100K-$300K ICAM grants, USDA RBDG grants<br>
+                        <strong>Timeline:</strong> 3-6 months application process<br>
+                        <strong>Use:</strong> Vehicle purchases, technology infrastructure</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Phase 2: SBA Financing</h4>
+                        <p><strong>Target:</strong> $50K-$200K 7(a) or 504 loans<br>
+                        <strong>Timeline:</strong> 30-90 days approval process<br>
+                        <strong>Use:</strong> Working capital, additional vehicles</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Phase 3: Growth Capital</h4>
+                        <p><strong>Target:</strong> Revenue-based financing or equipment loans<br>
+                        <strong>Timeline:</strong> After 12-18 months operations<br>
+                        <strong>Use:</strong> Fleet expansion, technology upgrades</p>
+                    </div>
+                </div>
+
+                <h3>Key Financial Success Factors</h3>
+                <ul class="checklist">
+                    <li><input type="checkbox"> Vehicle utilization above 35% industry average</li>
+                    <li><input type="checkbox"> Diversified payer mix (not just Medicaid)</li>
+                    <li><input type="checkbox"> Technology investment for operational efficiency</li>
+                    <li><input type="checkbox"> Geographic market selection (higher reimbursement areas)</li>
+                    <li><input type="checkbox"> Adequate working capital for long reimbursement cycles</li>
+                    <li><input type="checkbox"> Preventive maintenance to minimize vehicle downtime</li>
+                </ul>
+            </section>
+
+            <!-- Compliance Checklist -->
+            <section id="compliance" class="section print-section">
+                <h2><i class="fas fa-shield-alt"></i> Compliance Checklist</h2>
+
+                <div class="alert alert-warning">
+                    <strong><i class="fas fa-exclamation-triangle"></i> 2025-2026 Updates:</strong> Multiple regulatory changes in effect including new HIPAA Security Rule requirements (expected late 2025), Part 2 compliance deadline (February 16, 2026), and enhanced DOT safety technology requirements.
+                </div>
+
+                <h3>Federal Compliance Requirements</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>HIPAA Compliance</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Business Associate Agreements (BAAs) with healthcare providers</li>
+                            <li><input type="checkbox"> Physical safeguards: tamper-evident packaging, locked transport</li>
+                            <li><input type="checkbox"> Staff HIPAA training documentation</li>
+                            <li><input type="checkbox"> Electronic protection: encryption for ePHI devices</li>
+                            <li><input type="checkbox"> "Minimum necessary" standard compliance</li>
+                            <li><input type="checkbox"> Part 2 compliance by February 16, 2026</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>ADA Compliance</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Vehicle accessibility standards (lifts, ramps, securement)</li>
+                            <li><input type="checkbox"> Priority seating clearly marked</li>
+                            <li><input type="checkbox"> Complementary paratransit service availability</li>
+                            <li><input type="checkbox"> Information in accessible formats (large print, braille)</li>
+                            <li><input type="checkbox"> Stop announcements for transfer points</li>
+                            <li><input type="checkbox"> 2025 pedestrian facility accessibility standards</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>DOT Regulations</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Requirement</th>
+                                <th>Vehicle Type</th>
+                                <th>Documentation</th>
+                                <th>Compliance Status</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>CDL License</td>
+                                <td>26,000+ lbs or 16+ passengers</td>
+                                <td>Medical certification, background check</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td>Annual Vehicle Inspection</td>
+                                <td>Commercial vehicles 10,000+ lbs</td>
+                                <td>14-month inspection record retention</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td>Driver Qualification Files</td>
+                                <td>All commercial drivers</td>
+                                <td>3-year driving history, employer verification</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td>Drug & Alcohol Testing</td>
+                                <td>CDL drivers</td>
+                                <td>Clearinghouse integration, oral fluid testing</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>State Requirements (South Carolina)</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Licensing & Permits</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> SCDHHS NEMT provider certification</li>
+                            <li><input type="checkbox"> SC Department of Public Health ambulance license (if applicable)</li>
+                            <li><input type="checkbox"> Business registration (LLC/Corporation)</li>
+                            <li><input type="checkbox"> Commercial vehicle registration</li>
+                            <li><input type="checkbox"> Workers' compensation insurance</li>
+                            <li><input type="checkbox"> State tax registrations</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Driver Requirements</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Valid SC driver's license</li>
+                            <li><input type="checkbox"> First Aid and CPR certification</li>
+                            <li><input type="checkbox"> Background check completion</li>
+                            <li><input type="checkbox"> EMS personnel certification (if required)</li>
+                            <li><input type="checkbox"> Patient care training documentation</li>
+                            <li><input type="checkbox"> Ongoing training record maintenance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Insurance Requirements Matrix</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Insurance Type</th>
+                                <th>Minimum Coverage</th>
+                                <th>Typical Cost</th>
+                                <th>Compliance Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Commercial Auto</td>
+                                <td>25/50/25 (SC minimum)</td>
+                                <td>$4,000-$11,000/vehicle</td>
+                                <td>Required for fee-based transport</td>
+                            </tr>
+                            <tr>
+                                <td>General Liability</td>
+                                <td>$300,000 CSL recommended</td>
+                                <td>$2,000-$5,000/year</td>
+                                <td>Professional liability coverage</td>
+                            </tr>
+                            <tr>
+                                <td>Workers' Compensation</td>
+                                <td>State required if employees</td>
+                                <td>$3,000-$8,000/year</td>
+                                <td>Based on payroll and risk class</td>
+                            </tr>
+                            <tr>
+                                <td>Cargo Insurance</td>
+                                <td>$5,000 per vehicle minimum</td>
+                                <td>$500-$2,000/year</td>
+                                <td>Medical equipment coverage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Documentation Requirements</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Driver Files (Required)</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Application for employment</li>
+                            <li><input type="checkbox"> Motor vehicle record (3 years)</li>
+                            <li><input type="checkbox"> Previous employer verification (3 years DOT experience)</li>
+                            <li><input type="checkbox"> Medical examiner's certificate</li>
+                            <li><input type="checkbox"> Drug and alcohol test results</li>
+                            <li><input type="checkbox"> Training records and certifications</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Vehicle Files (Required)</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Annual inspection reports (14 months retention)</li>
+                            <li><input type="checkbox"> Maintenance and repair records</li>
+                            <li><input type="checkbox"> Registration and insurance documentation</li>
+                            <li><input type="checkbox"> Equipment inspection checklists</li>
+                            <li><input type="checkbox"> Deficiency correction records</li>
+                            <li><input type="checkbox"> Driver vehicle inspection reports</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Industry-Specific Requirements</h3>
+                <div class="alert alert-info">
+                    <strong><i class="fas fa-info-circle"></i> Medical Transport Specific:</strong> NEMT providers must maintain patient care report forms, coordinate with Medicaid transportation brokers, and comply with updated CMS requirements under the Consolidated Appropriations Act, 2021.
+                </div>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Requirement</th>
+                                <th>Frequency</th>
+                                <th>Responsible Party</th>
+                                <th>Compliance Check</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Patient care report completion</td>
+                                <td>Each transport</td>
+                                <td>Driver/EMT</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td>Medicaid billing compliance</td>
+                                <td>Monthly</td>
+                                <td>Billing department</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td>Quality assurance reviews</td>
+                                <td>Quarterly</td>
+                                <td>Management</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                            <tr>
+                                <td>Driver recertification</td>
+                                <td>Annually</td>
+                                <td>HR/Training</td>
+                                <td><input type="checkbox"></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Enforcement & Penalties</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>HIPAA Violations</h4>
+                        <p><strong>Civil Penalties:</strong> $100-$50,000 per violation</p>
+                        <p><strong>Criminal Penalties:</strong> Up to $250,000 and 10 years imprisonment</p>
+                        <p><strong>Recent Focus:</strong> Enhanced enforcement of electronic safeguards</p>
+                    </div>
+                    <div class="card">
+                        <h4>DOT Violations</h4>
+                        <p><strong>Out-of-Service Orders:</strong> Immediate vehicle/driver prohibition</p>
+                        <p><strong>Civil Penalties:</strong> Up to $10,000 per violation</p>
+                        <p><strong>Safety Rating Impact:</strong> Affects insurance and contracts</p>
+                    </div>
+                </div>
+
+                <h3>Compliance Monitoring Strategy</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Monthly Reviews</h4>
+                        <p>Driver qualification files, vehicle inspection status, insurance coverage verification, incident reports, and training record updates.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Quarterly Audits</h4>
+                        <p>HIPAA compliance assessment, DOT regulation compliance, state licensing status, insurance claim reviews, and corrective action plans.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Annual Assessments</h4>
+                        <p>Comprehensive compliance audit, policy updates for regulatory changes, staff training program evaluation, and third-party compliance review.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Next Steps -->
+            <section id="next-steps" class="section print-section">
+                <h2><i class="fas fa-forward"></i> Next Steps & Action Plan</h2>
+
+                <div class="alert alert-success">
+                    <strong><i class="fas fa-rocket"></i> Ready to Launch:</strong> South Carolina medical transportation presents an excellent opportunity with strong demographics, federal funding availability, and significant market demand. Following this action plan will position you for successful business launch and sustainable growth.
+                </div>
+
+                <h3>Immediate Actions (Next 30 Days)</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Week 1-2: Business Formation & Initial Research</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Form LLC/Corporation with SC Secretary of State</li>
+                            <li><input type="checkbox"> Obtain EIN from IRS for business operations</li>
+                            <li><input type="checkbox"> Research target counties and competition analysis</li>
+                            <li><input type="checkbox"> Contact SCDHHS for NEMT provider certification requirements</li>
+                            <li><input type="checkbox"> Begin federal grant application research</li>
+                        </ul>
+                        <a href="#" class="btn">Start Business Formation</a>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Week 3-4: Financial Planning & Grant Applications</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Secure startup funding ($65K-$130K based on model)</li>
+                            <li><input type="checkbox"> Apply for USDA Rural Business Development Grants</li>
+                            <li><input type="checkbox"> Begin SBA loan pre-qualification process</li>
+                            <li><input type="checkbox"> Open business banking accounts</li>
+                            <li><input type="checkbox"> Research commercial insurance providers</li>
+                        </ul>
+                        <a href="#" class="btn btn-warning">Apply for Grants</a>
+                    </div>
+                </div>
+
+                <h3>Strategic Implementation (30-90 Days)</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Licensing & Certification</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Submit SCDHHS NEMT provider certification application</li>
+                            <li><input type="checkbox"> Complete DOT registration and licensing</li>
+                            <li><input type="checkbox"> Obtain commercial driver's licenses for operators</li>
+                            <li><input type="checkbox"> Complete background checks for all personnel</li>
+                            <li><input type="checkbox"> Secure commercial insurance coverage</li>
+                        </ul>
+                        <p><strong>Timeline:</strong> 60-90 days for full certification</p>
+                    </div>
+                    <div class="card">
+                        <h4>Vehicle & Equipment Acquisition</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Purchase/lease wheelchair-accessible vehicles</li>
+                            <li><input type="checkbox"> Install required safety and medical equipment</li>
+                            <li><input type="checkbox"> Complete vehicle inspections and certifications</li>
+                            <li><input type="checkbox"> Implement GPS tracking and scheduling technology</li>
+                            <li><input type="checkbox"> Vehicle registration and commercial plates</li>
+                        </ul>
+                        <p><strong>Timeline:</strong> 30-60 days from funding</p>
+                    </div>
+                </div>
+
+                <h3>Long-term Growth Strategy (90+ Days)</h3>
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Quarter</th>
+                                <th>Objective</th>
+                                <th>Key Activities</th>
+                                <th>Success Metrics</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Q1 2026</td>
+                                <td>Launch Operations</td>
+                                <td>Begin service delivery, establish partnerships, hire staff</td>
+                                <td>50+ trips/month, break-even operations</td>
+                            </tr>
+                            <tr>
+                                <td>Q2 2026</td>
+                                <td>Market Development</td>
+                                <td>Expand service area, develop facility contracts</td>
+                                <td>100+ trips/month, 15% profit margin</td>
+                            </tr>
+                            <tr>
+                                <td>Q3 2026</td>
+                                <td>Technology Integration</td>
+                                <td>Optimize scheduling, implement performance tracking</td>
+                                <td>40%+ vehicle utilization, customer satisfaction >90%</td>
+                            </tr>
+                            <tr>
+                                <td>Q4 2026</td>
+                                <td>Growth Planning</td>
+                                <td>Evaluate fleet expansion, additional county penetration</td>
+                                <td>ROI >25%, prepare for 2027 expansion</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Critical Federal Funding Deadlines</h3>
+                <div class="alert alert-warning">
+                    <strong><i class="fas fa-calendar-alt"></i> Urgent Deadlines:</strong> Federal Lands Highway funding deadline is January 15, 2026 (6 days from today), and BUILD grants deadline is February 24, 2026. Immediate action required for these opportunities.
+                </div>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Deadline</th>
+                                <th>Program</th>
+                                <th>Amount</th>
+                                <th>Action Required</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr style="background: #ffe6e6;">
+                                <td><strong>January 15, 2026</strong></td>
+                                <td>FHWA Federal Lands Highway</td>
+                                <td>Varies</td>
+                                <td><span class="status-badge status-high">Apply Immediately</span></td>
+                            </tr>
+                            <tr style="background: #fff3cd;">
+                                <td><strong>February 24, 2026</strong></td>
+                                <td>FHWA BUILD Grants</td>
+                                <td>Capital investments</td>
+                                <td><span class="status-badge status-medium">Prepare Application</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>March 31, 2026</strong></td>
+                                <td>USDA REDLG Q3</td>
+                                <td>Up to $500K</td>
+                                <td><span class="status-badge status-info">Plan Submission</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>June 30, 2026</strong></td>
+                                <td>USDA REDLG Q4</td>
+                                <td>Up to $500K</td>
+                                <td><span class="status-badge status-low">Future Planning</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>Key Partnerships to Establish</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Healthcare Facilities</h4>
+                        <ul>
+                            <li><strong>Hospitals:</strong> MUSC, Prisma Health, Bon Secours</li>
+                            <li><strong>Dialysis Centers:</strong> DaVita, Fresenius, regional providers</li>
+                            <li><strong>Rehabilitation Facilities:</strong> Physical therapy, occupational therapy</li>
+                            <li><strong>Assisted Living:</strong> Senior living communities</li>
+                        </ul>
+                        <a href="#" class="btn">Contact Healthcare Partners</a>
+                    </div>
+                    <div class="card">
+                        <h4>Government & Regulatory</h4>
+                        <ul>
+                            <li><strong>SCDHHS:</strong> Medicaid transportation coordination</li>
+                            <li><strong>Modivcare:</strong> Existing NEMT network integration</li>
+                            <li><strong>County Health Departments:</strong> Rural service coordination</li>
+                            <li><strong>Area Agencies on Aging:</strong> Senior service partnerships</li>
+                        </ul>
+                        <a href="#" class="btn">Schedule Agency Meetings</a>
+                    </div>
+                </div>
+
+                <h3>Technology Implementation Roadmap</h3>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <h4>Phase 1: Essential Systems</h4>
+                        <p><strong>Month 1-2:</strong> Implement Bambi NEMT scheduling software, GPS tracking system, basic communication tools, and billing integration.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Phase 2: Advanced Features</h4>
+                        <p><strong>Month 3-6:</strong> Add route optimization, patient management system, performance reporting, and healthcare facility integration.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <h4>Phase 3: Optimization</h4>
+                        <p><strong>Month 6+:</strong> Implement AI-powered scheduling, predictive maintenance, advanced analytics, and mobile patient apps.</p>
+                    </div>
+                </div>
+
+                <h3>Risk Mitigation Checklist</h3>
+                <div class="grid">
+                    <div class="card">
+                        <h4>Financial Risks</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Maintain 6+ months operating expenses in reserve</li>
+                            <li><input type="checkbox"> Diversify payer mix beyond just Medicaid</li>
+                            <li><input type="checkbox"> Establish factoring relationship for cash flow</li>
+                            <li><input type="checkbox"> Monitor key financial metrics monthly</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h4>Operational Risks</h4>
+                        <ul class="checklist">
+                            <li><input type="checkbox"> Implement preventive maintenance program</li>
+                            <li><input type="checkbox"> Establish backup vehicle arrangements</li>
+                            <li><input type="checkbox"> Create comprehensive staff training program</li>
+                            <li><input type="checkbox"> Develop emergency response procedures</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h3>Success Monitoring Dashboard</h3>
+                <div class="metric">
+                    <h3>Track These KPIs Monthly</h3>
+                    <p>Vehicle utilization, trips per vehicle per day, customer satisfaction, on-time performance, revenue per mile, profit margin, cash flow position</p>
+                </div>
+
+                <div class="table-responsive">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>Target</th>
+                                <th>Industry Benchmark</th>
+                                <th>Monitoring Frequency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Vehicle Utilization</td>
+                                <td>>40%</td>
+                                <td>35% average</td>
+                                <td>Daily</td>
+                            </tr>
+                            <tr>
+                                <td>Profit Margin</td>
+                                <td>20-30%</td>
+                                <td>20-30% industry</td>
+                                <td>Monthly</td>
+                            </tr>
+                            <tr>
+                                <td>Customer Satisfaction</td>
+                                <td>>95%</td>
+                                <td>90% average</td>
+                                <td>Weekly</td>
+                            </tr>
+                            <tr>
+                                <td>On-Time Performance</td>
+                                <td>>95%</td>
+                                <td>85% average</td>
+                                <td>Daily</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="alert alert-success">
+                    <strong><i class="fas fa-check-circle"></i> Ready to Begin:</strong> This comprehensive analysis provides everything needed to successfully launch a medical transportation business in South Carolina. With proper planning, adequate funding, and attention to compliance, you can build a profitable business while serving critical community healthcare needs.
+                </div>
+
+                <div class="grid">
+                    <a href="mailto:info@scdhhs.gov?subject=NEMT Provider Certification Inquiry" class="btn">Contact SCDHHS</a>
+                    <a href="https://www.usda.gov/topics/rural/business-programs" class="btn btn-warning">Apply for USDA Grants</a>
+                    <a href="https://www.sba.gov/funding-programs/loans" class="btn btn-success">SBA Loan Information</a>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling navigation
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Remove active class from all links
+                document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                // Add active class to clicked link
+                this.classList.add('active');
+
+                // Smooth scroll to section
+                const targetId = this.getAttribute('href');
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Update active nav on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                if (scrollY >= sectionTop) {
+                    current = '#' + section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Interactive checklist functionality
+        document.querySelectorAll('.checklist input[type="checkbox"]').forEach(checkbox => {
+            checkbox.addEventListener('change', function() {
+                const listItem = this.closest('li');
+                if (this.checked) {
+                    listItem.style.backgroundColor = '#d4edda';
+                    listItem.style.textDecoration = 'line-through';
+                    listItem.style.opacity = '0.7';
+                } else {
+                    listItem.style.backgroundColor = 'white';
+                    listItem.style.textDecoration = 'none';
+                    listItem.style.opacity = '1';
+                }
+            });
+        });
+
+        // Progress bar animations
+        function animateProgressBars() {
+            const progressBars = document.querySelectorAll('.progress-fill');
+            progressBars.forEach(bar => {
+                const width = bar.style.width;
+                bar.style.width = '0%';
+                setTimeout(() => {
+                    bar.style.width = width;
+                }, 500);
+            });
+        }
+
+        // Animate progress bars when page loads
+        window.addEventListener('load', animateProgressBars);
+
+        // Print functionality
+        function printSection(sectionId) {
+            const section = document.querySelector(sectionId);
+            const printWindow = window.open('', '', 'width=800,height=600');
+            printWindow.document.write('<html><head><title>Print</title></head><body>');
+            printWindow.document.write(section.innerHTML);
+            printWindow.document.write('</body></html>');
+            printWindow.document.close();
+            printWindow.print();
+        }
+
+        // Add print buttons to sections
+        document.querySelectorAll('.section').forEach(section => {
+            const printBtn = document.createElement('button');
+            printBtn.textContent = 'Print Section';
+            printBtn.className = 'btn btn-sm';
+            printBtn.style.float = 'right';
+            printBtn.style.marginTop = '-50px';
+            printBtn.onclick = () => printSection('#' + section.id);
+            section.appendChild(printBtn);
+        });
+    </script>
+</body>
+</html>
