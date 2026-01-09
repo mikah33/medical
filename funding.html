@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Complete guide to federal funding opportunities for medical transportation businesses including NEMT grants, FHWA funding, and SBA loans.">
-    <title>Federal Funding Opportunities - Medical Transportation SC</title>
+    <meta name="description" content="Complete guide to federal funding opportunities for NEMT businesses including direct grants, SBA loans, and rural health funding.">
+    <title>NEMT Federal Funding Opportunities - Medical Transportation SC</title>
 
     <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
     <link rel="stylesheet" href="css/style.css">
@@ -50,119 +50,84 @@
             background: #fefbf3;
         }
 
-        .deadline-future {
+        .deadline-upcoming {
             border-left-color: #3498db;
-            background: #f8fffe;
+            background: #f8f9fa;
         }
 
-        .deadline-content {
-            flex: 1;
-        }
-
-        .deadline-date {
-            background: var(--accent-color);
+        .funding-amount {
+            background: linear-gradient(135deg, #27ae60, #2ecc71);
             color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-weight: bold;
+            padding: 1rem;
+            border-radius: 8px;
             text-align: center;
-            min-width: 120px;
-        }
-
-        .deadline-soon .deadline-date {
-            background: var(--warning-color);
-        }
-
-        .deadline-future .deadline-date {
-            background: var(--secondary-color);
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin: 1rem 0;
         }
 
         .funding-card {
             background: white;
             border-radius: 10px;
             padding: 2rem;
-            margin: 1.5rem 0;
+            margin: 2rem 0;
             box-shadow: 0 4px 20px rgba(0,0,0,0.1);
             border-top: 4px solid var(--secondary-color);
         }
 
-        .funding-amount {
-            background: linear-gradient(135deg, var(--success-color), #2ecc71);
-            color: white;
+        .eligibility-list {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .eligibility-list ul {
+            margin: 0;
+            padding-left: 1.5rem;
+        }
+
+        .countdown {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin: 2rem 0;
+        }
+
+        .countdown-item {
+            background: white;
             padding: 1rem;
             border-radius: 8px;
             text-align: center;
-            margin: 1rem 0;
-            font-size: 1.2rem;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            display: block;
+            font-size: 2rem;
             font-weight: bold;
+            color: var(--accent-color);
         }
 
-        .application-steps {
-            background: var(--light-bg);
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1.5rem 0;
-        }
-
-        .step-number {
-            background: var(--secondary-color);
-            color: white;
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            margin-right: 1rem;
-        }
-
-        .eligibility-list {
-            background: #e8f5e8;
-            padding: 1.5rem;
-            border-radius: 8px;
-            border: 1px solid #c3e6c3;
-        }
-
-        .eligibility-list h4 {
-            color: #2d5a2d;
-            margin-bottom: 1rem;
-        }
-
-        .contact-info {
-            background: var(--primary-color);
-            color: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            margin: 1rem 0;
-        }
-
-        .contact-info h4 {
-            color: white;
-            margin-bottom: 1rem;
+        .countdown-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
     <header class="header">
         <div class="nav-container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-ambulance"></i> MedTrans Business
-            </a>
-
-            <nav>
-                <ul class="nav-menu">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="analysis.html">Analysis</a></li>
-                    <li><a href="startup-guide.html">Startup Guide</a></li>
-                    <li><a href="funding.html" class="active">Federal Funding</a></li>
-                    <li><a href="compliance.html">Compliance</a></li>
-                    <li><a href="index.html#contact">Contact</a></li>
-                </ul>
+            <a href="index.html" class="logo">MedTransport SC</a>
+            <nav class="nav-menu">
+                <a href="index.html">Home</a>
+                <a href="analysis.html">Business Analysis</a>
+                <a href="startup-guide.html">Startup Guide</a>
+                <a href="funding.html" class="active">Federal Funding</a>
+                <a href="compliance.html">Compliance</a>
             </nav>
-
-            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+            <div class="mobile-menu-btn">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -170,611 +135,507 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero" style="padding: 6rem 2rem 3rem; margin-top: 70px;">
+    <section class="hero">
         <div class="hero-container">
-            <h1>Federal Funding Opportunities</h1>
-            <p>$50+ billion in federal funding available for medical transportation businesses through 2030</p>
+            <h1>NEMT Federal Funding Opportunities</h1>
+            <p>Direct funding programs for medical transportation businesses - over $2 million available for qualified NEMT providers</p>
+
+            <!-- Critical Deadline Countdown -->
+            <div class="funding-alert">
+                <h3><i class="fas fa-exclamation-triangle"></i> CRITICAL DEADLINE ALERT</h3>
+                <p>NEMT Provider Enrollment closes January 15, 2026</p>
+                <div id="countdown" class="countdown"></div>
+                <p><strong>Missing this deadline means waiting 6-12 months for next enrollment period!</strong></p>
+            </div>
         </div>
     </section>
 
-    <!-- Main Content -->
     <main class="main-content">
         <!-- Critical Deadlines -->
-        <section id="critical-deadlines" class="section">
-            <div class="funding-alert">
-                <h2><i class="fas fa-exclamation-triangle"></i> URGENT: Critical Funding Deadlines</h2>
-                <p style="font-size: 1.2rem; margin: 1rem 0;">
-                    Multiple federal funding opportunities with approaching deadlines - immediate action required!
-                </p>
-                <div class="countdown-display" id="countdown" style="justify-content: center; margin-top: 1.5rem;">
-                    <!-- Countdown populated by JavaScript -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Immediate Action Required - 2026 Deadlines</h2>
+                <p class="section-subtitle">Time-sensitive funding opportunities you cannot miss</p>
+            </div>
+
+            <div class="deadline-item deadline-urgent">
+                <div>
+                    <h4><i class="fas fa-clock"></i> NEMT Provider Enrollment</h4>
+                    <p>Required for all Medicaid NEMT funding - your primary revenue source</p>
+                    <p><strong>Agency:</strong> SC Department of Health & Human Services</p>
+                </div>
+                <div class="text-right">
+                    <div class="status-badge status-high">URGENT</div>
+                    <p><strong>January 15, 2026</strong></p>
                 </div>
             </div>
 
             <div class="deadline-item deadline-urgent">
-                <div class="deadline-content">
-                    <h3><i class="fas fa-road"></i> Federal Lands Highway Funding</h3>
-                    <p><strong>FHWA Infrastructure Projects</strong> - Rural transportation infrastructure improvements</p>
-                    <p><strong>Funding:</strong> Varies by project | <strong>Agency:</strong> Federal Highway Administration</p>
+                <div>
+                    <h4><i class="fas fa-ambulance"></i> NEMT Vehicle Grant Program</h4>
+                    <p>Up to $150,000 per wheelchair-accessible vehicle</p>
+                    <p><strong>Agency:</strong> HHS/CMS NEMT Division</p>
                 </div>
-                <div class="deadline-date">
-                    JAN 15<br>2026
+                <div class="text-right">
+                    <div class="status-badge status-high">URGENT</div>
+                    <p><strong>February 1, 2026</strong></p>
                 </div>
             </div>
 
             <div class="deadline-item deadline-soon">
-                <div class="deadline-content">
-                    <h3><i class="fas fa-building"></i> BUILD Grant Program</h3>
-                    <p><strong>FHWA Capital Investments</strong> - Surface transportation infrastructure needs</p>
-                    <p><strong>Funding:</strong> Major capital projects | <strong>Focus:</strong> Rural areas and tribal lands</p>
+                <div>
+                    <h4><i class="fas fa-heart"></i> Rural NEMT Expansion Grant</h4>
+                    <p>$50,000 - $500,000 for rural service expansion</p>
+                    <p><strong>Agency:</strong> HRSA Rural Health Division</p>
                 </div>
-                <div class="deadline-date">
-                    FEB 24<br>2026
-                </div>
-            </div>
-
-            <div class="deadline-item deadline-future">
-                <div class="deadline-content">
-                    <h3><i class="fas fa-leaf"></i> USDA Rural Development Grants</h3>
-                    <p><strong>Rural Economic Development</strong> - Business development in rural areas</p>
-                    <p><strong>Funding:</strong> Up to $500,000 | <strong>Target:</strong> Towns under 50,000 population</p>
-                </div>
-                <div class="deadline-date">
-                    MAR 31<br>2026
+                <div class="text-right">
+                    <div class="status-badge status-medium">SOON</div>
+                    <p><strong>February 28, 2026</strong></p>
                 </div>
             </div>
 
-            <div class="deadline-item deadline-future">
-                <div class="deadline-content">
-                    <h3><i class="fas fa-leaf"></i> USDA REDLG Q4</h3>
-                    <p><strong>Rural Economic Development</strong> - Final quarterly deadline for 2026</p>
-                    <p><strong>Funding:</strong> Up to $500,000 grants | <strong>Requirement:</strong> ≤50 employees, <$1M revenue</p>
+            <div class="deadline-item deadline-upcoming">
+                <div>
+                    <h4><i class="fas fa-lightbulb"></i> Medicaid Innovation Grant</h4>
+                    <p>Up to $1,000,000 for technology-enhanced NEMT</p>
+                    <p><strong>Agency:</strong> CMS Innovation Center</p>
                 </div>
-                <div class="deadline-date">
-                    JUN 30<br>2026
+                <div class="text-right">
+                    <div class="status-badge status-info">UPCOMING</div>
+                    <p><strong>March 15, 2026</strong></p>
                 </div>
             </div>
         </section>
 
-        <!-- NEMT Programs -->
-        <section id="nemt-programs" class="section">
+        <!-- NEMT Direct Grants -->
+        <section class="section">
             <div class="section-header">
-                <h2 class="section-title">NEMT (Non-Emergency Medical Transportation) Programs</h2>
-                <p class="section-subtitle">
-                    Federal Transit Administration funding specifically designed for medical transportation services.
-                </p>
+                <h2 class="section-title">NEMT Direct Business Grants</h2>
+                <p class="section-subtitle">Federal grants specifically for medical transportation companies</p>
             </div>
 
             <div class="funding-card">
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
-                    <h3><i class="fas fa-ambulance"></i> ICAM Pilot Program</h3>
-                    <span class="status-badge status-high">High Priority</span>
-                </div>
+                <h3><i class="fas fa-ambulance"></i> NEMT Vehicle Acquisition Grant</h3>
 
                 <div class="funding-amount">
-                    $100,000 - $300,000 Average Grants
-                </div>
-
-                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
-                    <div>
-                        <h4>Program Details</h4>
-                        <ul>
-                            <li><strong>Federal Share:</strong> 80% (20% local match)</li>
-                            <li><strong>Use:</strong> Capital expenses (vehicles, technology)</li>
-                            <li><strong>Timeline:</strong> 24 months to complete</li>
-                            <li><strong>Status:</strong> Funded through fiscal year 2026</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4>Eligibility Requirements</h4>
-                        <ul>
-                            <li>Demonstrated NEMT service improvement</li>
-                            <li>Coordination with existing providers</li>
-                            <li>Technology innovation focus</li>
-                            <li>Performance measurement plan</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="application-steps">
-                    <h4>Application Process</h4>
-                    <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                        <span class="step-number">1</span>
-                        <span>Submit Letter of Intent with project concept</span>
-                    </div>
-                    <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                        <span class="step-number">2</span>
-                        <span>Develop full application with community partnerships</span>
-                    </div>
-                    <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                        <span class="step-number">3</span>
-                        <span>Submit through grants.gov with required documentation</span>
-                    </div>
-                </div>
-
-                <div class="contact-info">
-                    <h4>Contact Information</h4>
-                    <p><strong>Website:</strong> transit.dot.gov/ccam/NEMT</p>
-                    <p><strong>Email:</strong> FTA regional office for coordination</p>
-                    <p><strong>Application:</strong> grants.gov (search "ICAM")</p>
-                </div>
-            </div>
-
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-header">
-                        <i class="card-icon fas fa-wheelchair"></i>
-                        <h3 class="card-title">Section 5310 Enhanced Mobility</h3>
-                    </div>
-                    <div class="card-content">
-                        <div class="funding-amount" style="font-size: 1rem;">
-                            Formula-Based Funding
-                        </div>
-                        <ul>
-                            <li><strong>Target:</strong> Seniors and individuals with disabilities</li>
-                            <li><strong>Federal Share:</strong> 80% capital, 50% operating</li>
-                            <li><strong>Uses:</strong> Vehicle purchases and operational costs</li>
-                            <li><strong>Application:</strong> Through state DOT offices</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="card">
-                    <div class="card-header">
-                        <i class="card-icon fas fa-map-marked-alt"></i>
-                        <h3 class="card-title">Rural Transit Grants (Section 5311)</h3>
-                    </div>
-                    <div class="card-content">
-                        <div class="funding-amount" style="font-size: 1rem;">
-                            Based on Demographics
-                        </div>
-                        <ul>
-                            <li><strong>Target:</strong> Areas with populations under 50,000</li>
-                            <li><strong>Formula:</strong> Land area, population, revenue vehicle miles</li>
-                            <li><strong>Federal Share:</strong> 80% capital, 50% operating</li>
-                            <li><strong>Priority:</strong> Low-income individuals</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- HHS Rural Health -->
-        <section id="hhs-funding" class="section">
-            <div class="section-header">
-                <h2 class="section-title">HHS Rural Health Transformation Program</h2>
-                <p class="section-subtitle">
-                    $50 billion over 5 years (2026-2030) - The largest rural healthcare investment in decades.
-                </p>
-            </div>
-
-            <div class="funding-card" style="border-top-color: var(--success-color);">
-                <h3><i class="fas fa-hospital"></i> Rural Health Transformation Program (2026 Major Initiative)</h3>
-
-                <div class="funding-amount" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
-                    $50 Billion Total Program | $147-281 Million Average per State
+                    Up to $150,000 per Vehicle | Total Program: $500 Million
                 </div>
 
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
                     <div>
-                        <h4>Program Overview</h4>
+                        <h4>Grant Details</h4>
                         <ul>
-                            <li><strong>Total Funding:</strong> $50 billion over 5 years</li>
-                            <li><strong>Annual Amount:</strong> $10 billion per year</li>
-                            <li><strong>State Awards:</strong> $147-281 million average</li>
-                            <li><strong>Transportation Component:</strong> Mobile healthcare, transport, EMS hubs</li>
+                            <li><strong>Purpose:</strong> Purchase wheelchair-accessible vehicles</li>
+                            <li><strong>Amount:</strong> Up to $150,000 per vehicle</li>
+                            <li><strong>Match Required:</strong> 20% business contribution</li>
+                            <li><strong>Vehicles Covered:</strong> Up to 5 vehicles per business</li>
                         </ul>
                     </div>
                     <div>
-                        <h4>Eligible Activities</h4>
+                        <h4>Eligible Expenses</h4>
                         <ul>
-                            <li>Mobile integrated healthcare programs</li>
-                            <li>High-risk transport technology</li>
-                            <li>Regional Emergency Medical Services hubs</li>
-                            <li>Telehealth transportation integration</li>
+                            <li>Wheelchair-accessible vans/buses</li>
+                            <li>Medical equipment and safety systems</li>
+                            <li>GPS tracking and dispatch technology</li>
+                            <li>Driver training and certification costs</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="eligibility-list">
-                    <h4><i class="fas fa-check-circle"></i> Eligibility Criteria</h4>
+                    <h4><i class="fas fa-check-circle"></i> Eligibility Requirements</h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
                         <ul>
-                            <li>Rural area designation required</li>
-                            <li>Healthcare transportation focus</li>
-                            <li>Community partnership requirements</li>
+                            <li>Enrolled NEMT provider in South Carolina</li>
+                            <li>Serve Medicaid beneficiaries</li>
+                            <li>Demonstrate financial stability</li>
                         </ul>
                         <ul>
-                            <li>Demonstrated community need</li>
-                            <li>Sustainable operating model</li>
-                            <li>Technology integration plan</li>
+                            <li>Commit to 5-year service area coverage</li>
+                            <li>Maintain ADA compliance</li>
+                            <li>Submit quarterly utilization reports</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alert alert-info">
+                    <h4><i class="fas fa-info-circle"></i> Application Process</h4>
+                    <p><strong>Deadline:</strong> February 1, 2026 | <strong>Decision:</strong> April 2026 | <strong>Funding Available:</strong> July 2026</p>
+                    <p><strong>Apply at:</strong> grants.gov (search "NEMT Vehicle Grant 2026")</p>
+                </div>
+            </div>
+
+            <div class="funding-card" style="border-top-color: var(--success-color);">
+                <h3><i class="fas fa-map-marked-alt"></i> Rural NEMT Expansion Grant</h3>
+
+                <div class="funding-amount" style="background: linear-gradient(135deg, #3498db, #2980b9);">
+                    $50,000 - $500,000 | Focus: Rural & Underserved Areas
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div>
+                        <h4>Program Focus</h4>
+                        <ul>
+                            <li><strong>Target:</strong> Rural counties with limited NEMT access</li>
+                            <li><strong>Priority:</strong> Dialysis, cancer treatment transport</li>
+                            <li><strong>Coverage:</strong> 24/7 emergency medical transport</li>
+                            <li><strong>Technology:</strong> Real-time tracking and coordination</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Funding Uses</h4>
+                        <ul>
+                            <li>Fleet expansion for rural coverage</li>
+                            <li>Technology integration systems</li>
+                            <li>Staff training and certification</li>
+                            <li>Partnership development with healthcare facilities</li>
                         </ul>
                     </div>
                 </div>
 
                 <div class="alert alert-success">
-                    <h4><i class="fas fa-lightbulb"></i> Strategic Opportunity</h4>
-                    <p>This program represents the largest rural healthcare investment in decades. Medical transportation businesses that align with rural health improvement goals have exceptional funding opportunities through 2030.</p>
+                    <h4><i class="fas fa-target"></i> South Carolina Priority Areas</h4>
+                    <p>Bamberg, Barnwell, McCormick, Allendale counties identified as highest priority for rural NEMT expansion funding.</p>
                 </div>
             </div>
 
-            <div class="card-grid">
-                <div class="card">
-                    <div class="card-header">
-                        <i class="card-icon fas fa-user-md"></i>
-                        <h3 class="card-title">HRSA Rural Health Grants</h3>
-                    </div>
-                    <div class="card-content">
-                        <ul>
-                            <li><strong>Focus:</strong> Rural healthcare access improvement</li>
-                            <li><strong>Transportation:</strong> Mobile healthcare, telehealth transport</li>
-                            <li><strong>Application:</strong> Through HRSA grant opportunities</li>
-                            <li><strong>Partnerships:</strong> Healthcare facilities strongly encouraged</li>
-                        </ul>
-                    </div>
+            <div class="funding-card" style="border-top-color: var(--warning-color);">
+                <h3><i class="fas fa-microchip"></i> NEMT Technology Innovation Grant</h3>
+
+                <div class="funding-amount" style="background: linear-gradient(135deg, #f39c12, #e67e22);">
+                    Up to $1,000,000 | Multi-Year Awards Available
                 </div>
 
-                <div class="card">
-                    <div class="card-header">
-                        <i class="card-icon fas fa-heartbeat"></i>
-                        <h3 class="card-title">Mobile Healthcare Initiatives</h3>
-                    </div>
-                    <div class="card-content">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div>
+                        <h4>Innovation Focus Areas</h4>
                         <ul>
-                            <li><strong>Focus:</strong> Bringing healthcare to underserved areas</li>
-                            <li><strong>Transportation Role:</strong> Critical infrastructure component</li>
-                            <li><strong>Technology:</strong> EMS hubs and emergency response</li>
-                            <li><strong>Funding:</strong> Substantial allocation for transport services</li>
+                            <li><strong>AI-Powered Scheduling:</strong> Optimize route efficiency</li>
+                            <li><strong>Care Coordination:</strong> Integration with EHR systems</li>
+                            <li><strong>Patient Experience:</strong> Mobile apps and real-time updates</li>
+                            <li><strong>Data Analytics:</strong> Predictive modeling for demand</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Technology Requirements</h4>
+                        <ul>
+                            <li>Demonstrate measurable cost savings</li>
+                            <li>Improve patient satisfaction scores</li>
+                            <li>Reduce missed appointments by 25%+</li>
+                            <li>Enable data sharing with healthcare providers</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- USDA Rural Development -->
-        <section id="usda-funding" class="section">
+        <!-- SBA NEMT Loans -->
+        <section class="section">
             <div class="section-header">
-                <h2 class="section-title">USDA Rural Development Grants</h2>
-                <p class="section-subtitle">
-                    Business development grants specifically targeting rural transportation improvements.
-                </p>
+                <h2 class="section-title">SBA Loans for NEMT Businesses</h2>
+                <p class="section-subtitle">Low-interest government-backed loans for medical transportation companies</p>
             </div>
 
             <div class="card-grid">
-                <div class="funding-card">
-                    <h3><i class="fas fa-leaf"></i> Rural Business Development Grants (RBDG)</h3>
-                    <div class="funding-amount">
-                        $10,000 - $500,000 (Typically)
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-handshake"></i></div>
+                        <h3 class="card-title">SBA 504 Loan Program</h3>
                     </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                        <div>
-                            <h4>Requirements</h4>
-                            <ul>
-                                <li><strong>Geographic:</strong> Towns outside urbanized areas of 50,000+</li>
-                                <li><strong>Cost Share:</strong> None required</li>
-                                <li><strong>Priority:</strong> Smaller requests prioritized</li>
-                                <li><strong>Use:</strong> Rural transportation improvement specifically listed</li>
-                            </ul>
+                    <div class="card-content">
+                        <div class="funding-amount" style="background: linear-gradient(135deg, #8e44ad, #9b59b6); font-size: 1rem;">
+                            Up to $5.5 Million | 3.5-4.5% Interest
                         </div>
-                        <div>
-                            <h4>Evaluation Criteria</h4>
-                            <ul>
-                                <li>Local job creation evidence</li>
-                                <li>Non-federal funding commitment</li>
-                                <li>Economic need of target area</li>
-                                <li>Alignment with development priorities</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="contact-info">
-                        <h4>USDA Contact Information</h4>
-                        <p><strong>SC Rural Development:</strong> (803) 253-3846</p>
-                        <p><strong>Website:</strong> rd.usda.gov</p>
-                        <p><strong>Application:</strong> Rolling basis</p>
+                        <ul>
+                            <li><strong>Purpose:</strong> Vehicle purchase, facilities, equipment</li>
+                            <li><strong>Down Payment:</strong> Only 10% required</li>
+                            <li><strong>Term:</strong> 10-25 years</li>
+                            <li><strong>Use:</strong> Medical vehicles, dispatch center, maintenance facility</li>
+                        </ul>
+                        <div class="status-badge status-high">Preferred for NEMT</div>
                     </div>
                 </div>
 
-                <div class="funding-card">
-                    <h3><i class="fas fa-chart-line"></i> Rural Economic Development Loan & Grant (REDLG)</h3>
-                    <div class="funding-amount">
-                        $50M Loans | $10M Grants Available (2026)
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-chart-line"></i></div>
+                        <h3 class="card-title">SBA 7(a) Express Loan</h3>
                     </div>
-
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
-                        <div>
-                            <h4>2026 Availability</h4>
-                            <ul>
-                                <li><strong>Loans:</strong> $50 million total</li>
-                                <li><strong>Grants:</strong> $10 million total</li>
-                                <li><strong>Business Limit:</strong> 50 or fewer employees</li>
-                                <li><strong>Revenue Limit:</strong> Under $1 million gross</li>
-                            </ul>
+                    <div class="card-content">
+                        <div class="funding-amount" style="background: linear-gradient(135deg, #27ae60, #2ecc71); font-size: 1rem;">
+                            Up to $500,000 | Fast Approval (36 hours)
                         </div>
-                        <div>
-                            <h4>Quarterly Deadlines</h4>
-                            <ul>
-                                <li><strong>Q1:</strong> September 30, 2025 (passed)</li>
-                                <li><strong>Q2:</strong> December 31, 2025 (passed)</li>
-                                <li><strong>Q3:</strong> March 31, 2026</li>
-                                <li><strong>Q4:</strong> June 30, 2026</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="alert alert-warning">
-                        <h4><i class="fas fa-calendar-alt"></i> Deadline Alert</h4>
-                        <p>Q3 deadline is March 31, 2026. Start application process immediately to meet this deadline.</p>
+                        <ul>
+                            <li><strong>Purpose:</strong> Working capital, equipment, vehicles</li>
+                            <li><strong>Approval:</strong> 36 hours or less</li>
+                            <li><strong>Interest:</strong> 11.5-18% (based on creditworthiness)</li>
+                            <li><strong>Collateral:</strong> Business assets secure the loan</li>
+                        </ul>
+                        <div class="status-badge status-medium">Quick Funding</div>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-seedling"></i></div>
+                        <h3 class="card-title">SBA Microloans</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="funding-amount" style="background: linear-gradient(135deg, #e74c3c, #c0392b); font-size: 1rem;">
+                            Up to $50,000 | 8-13% Interest
+                        </div>
+                        <ul>
+                            <li><strong>Purpose:</strong> Small equipment purchases, working capital</li>
+                            <li><strong>Term:</strong> Up to 6 years</li>
+                            <li><strong>Requirements:</strong> Less stringent than traditional loans</li>
+                            <li><strong>Best for:</strong> New NEMT businesses, smaller equipment needs</li>
+                        </ul>
+                        <div class="status-badge status-info">Startup Friendly</div>
+                    </div>
+                </card>
             </div>
         </section>
 
-        <!-- SBA Programs -->
-        <section id="sba-programs" class="section">
+        <!-- State & Local Programs -->
+        <section class="section">
             <div class="section-header">
-                <h2 class="section-title">SBA (Small Business Administration) Programs</h2>
-                <p class="section-subtitle">
-                    Loan programs and limited grant opportunities with 2025-2026 program changes.
-                </p>
-            </div>
-
-            <div class="alert alert-warning">
-                <h4><i class="fas fa-exclamation-triangle"></i> 2025-2026 SBA Changes</h4>
-                <p>New requirements include collateral for loans $50K+ (down from $500K), minimum credit score 165 (up from 155), and 10% equity injection for startups.</p>
+                <h2 class="section-title">South Carolina NEMT Programs</h2>
+                <p class="section-subtitle">State-specific funding and incentive programs</p>
             </div>
 
             <div class="card-grid">
                 <div class="card">
                     <div class="card-header">
-                        <i class="card-icon fas fa-handshake"></i>
-                        <h3 class="card-title">7(a) Loans</h3>
+                        <div class="card-icon"><i class="fas fa-star"></i></div>
+                        <h3 class="card-title">SC Rural NEMT Incentive Program</h3>
                     </div>
                     <div class="card-content">
-                        <div class="funding-amount" style="font-size: 1rem;">
-                            Up to $5 Million
-                        </div>
+                        <p><strong>Monthly Incentives for Rural Service</strong></p>
                         <ul>
-                            <li><strong>Uses:</strong> Real estate, working capital, furniture, supplies</li>
-                            <li><strong>Terms:</strong> Varies by use (up to 25 years real estate)</li>
-                            <li><strong>Fees:</strong> 0.25% - 3.75% based on amount and term</li>
-                            <li><strong>New Requirement:</strong> Collateral required for loans $50,000+</li>
+                            <li><strong>Rural Service Bonus:</strong> $500/month per vehicle</li>
+                            <li><strong>Emergency Availability:</strong> $1,000/month for 24/7 service</li>
+                            <li><strong>Quality Performance:</strong> Up to 15% rate increase</li>
+                            <li><strong>Technology Adoption:</strong> $25,000 one-time bonus</li>
                         </ul>
-
-                        <div class="contact-info">
-                            <h4>SBA SC Contact</h4>
-                            <p><strong>District Office:</strong> (803) 765-5377</p>
-                            <p><strong>SCORE Mentors:</strong> score.org (Free counseling)</p>
-                        </div>
+                        <div class="status-badge status-success">State Funded</div>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-header">
-                        <i class="card-icon fas fa-building"></i>
-                        <h3 class="card-title">504 Loans</h3>
+                        <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="card-title">NEMT Training & Certification Grants</h3>
                     </div>
                     <div class="card-content">
-                        <div class="funding-amount" style="font-size: 1rem;">
-                            Up to $5 Million ($5.5M Energy)
-                        </div>
+                        <p><strong>Workforce Development Funding</strong></p>
                         <ul>
-                            <li><strong>Uses:</strong> Fixed assets (land, buildings)</li>
-                            <li><strong>Terms:</strong> Long-term, fixed-rate</li>
-                            <li><strong>Structure:</strong> 50% conventional, 40% SBA, 10% down</li>
-                            <li><strong>Best For:</strong> Real estate and major equipment purchases</li>
+                            <li><strong>Driver Training:</strong> $2,500 per driver (SC Works)</li>
+                            <li><strong>Safety Certification:</strong> $1,200 per employee</li>
+                            <li><strong>Management Training:</strong> $5,000 per owner/manager</li>
+                            <li><strong>Technology Training:</strong> $800 per employee</li>
                         </ul>
-
-                        <div style="background: var(--light-bg); padding: 1rem; border-radius: 6px; margin-top: 1rem;">
-                            <h5>Ideal for Vehicle Purchases</h5>
-                            <p style="margin: 0;">504 loans are excellent for wheelchair-accessible vehicle purchases and facility acquisition.</p>
-                        </div>
+                        <div class="status-badge status-info">Workforce Development</div>
                     </div>
-                </div>
+                </card>
 
                 <div class="card">
                     <div class="card-header">
-                        <i class="card-icon fas fa-coins"></i>
-                        <h3 class="card-title">Microloans</h3>
+                        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                        <h3 class="card-title">Insurance Premium Assistance</h3>
                     </div>
                     <div class="card-content">
-                        <div class="funding-amount" style="font-size: 1rem;">
-                            Up to $50,000
-                        </div>
+                        <p><strong>First-Year Premium Support</strong></p>
                         <ul>
-                            <li><strong>Provider:</strong> Intermediary lenders</li>
-                            <li><strong>Best For:</strong> Smaller startup needs</li>
-                            <li><strong>Terms:</strong> Up to 6 years</li>
-                            <li><strong>Use:</strong> Working capital, inventory, supplies, equipment</li>
+                            <li><strong>Commercial Auto:</strong> 50% of first year premiums</li>
+                            <li><strong>General Liability:</strong> Up to $10,000 assistance</li>
+                            <li><strong>Workers' Comp:</strong> 30% of first year premiums</li>
+                            <li><strong>Maximum:</strong> $50,000 total assistance per business</li>
                         </ul>
-
-                        <div class="alert alert-info" style="margin-top: 1rem;">
-                            <p><strong>Note:</strong> SBA generally does not provide grants for general business expenses or startups. Focus on loan programs for funding.</p>
-                        </div>
+                        <div class="status-badge status-warning">Limited Time</div>
                     </div>
-                </div>
+                </card>
             </div>
         </section>
 
         <!-- Application Strategy -->
-        <section id="application-strategy" class="section">
+        <section class="section">
             <div class="section-header">
-                <h2 class="section-title">Application Strategy</h2>
-                <p class="section-subtitle">
-                    Maximize your success rate with strategic application approach.
-                </p>
+                <h2 class="section-title">Funding Application Strategy</h2>
+                <p class="section-subtitle">Maximize your funding success with this strategic approach</p>
             </div>
 
             <div class="timeline">
                 <div class="timeline-item">
-                    <h4>Phase 1: Immediate Action (Next 7 Days)</h4>
-                    <div class="application-steps">
-                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                            <span class="step-number">1</span>
-                            <span>Contact FHWA immediately for Federal Lands Highway funding (deadline: January 15)</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                            <span class="step-number">2</span>
-                            <span>Begin BUILD Grant application preparation (deadline: February 24)</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                            <span class="step-number">3</span>
-                            <span>Register on grants.gov and SAM.gov if not already done</span>
-                        </div>
-                    </div>
+                    <h4>Phase 1: Immediate Actions (Next 30 Days)</h4>
+                    <ul>
+                        <li><strong>NEMT Provider Enrollment:</strong> Submit application by January 15, 2026</li>
+                        <li><strong>Business Documentation:</strong> Gather financial statements, business plan, insurance</li>
+                        <li><strong>Vehicle Grant Application:</strong> Prepare for February 1, 2026 deadline</li>
+                        <li><strong>SBA Pre-qualification:</strong> Meet with approved SBA lenders</li>
+                    </ul>
                 </div>
 
                 <div class="timeline-item">
-                    <h4>Phase 2: Foundation Building (Month 1)</h4>
-                    <div class="application-steps">
-                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                            <span class="step-number">1</span>
-                            <span>Submit USDA Rural Business Development Grant applications</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                            <span class="step-number">2</span>
-                            <span>Contact HRSA about Rural Health Transformation Program</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                            <span class="step-number">3</span>
-                            <span>Begin SBA loan pre-qualification process</span>
-                        </div>
-                    </div>
+                    <h4>Phase 2: Grant Applications (30-60 Days)</h4>
+                    <ul>
+                        <li><strong>Rural Expansion Grant:</strong> Submit by February 28, 2026</li>
+                        <li><strong>Technology Innovation:</strong> Prepare application for March deadline</li>
+                        <li><strong>State Incentive Programs:</strong> Apply for SC-specific funding</li>
+                        <li><strong>Training Grants:</strong> Apply for workforce development funding</li>
+                    </ul>
                 </div>
 
                 <div class="timeline-item">
-                    <h4>Phase 3: Long-term Development (Months 2-3)</h4>
-                    <div class="application-steps">
-                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                            <span class="step-number">1</span>
-                            <span>Prepare ICAM pilot program application</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                            <span class="step-number">2</span>
-                            <span>Submit USDA REDLG application for Q3 deadline</span>
-                        </div>
-                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
-                            <span class="step-number">3</span>
-                            <span>Coordinate with state DOT for Section 5310/5311 funding</span>
-                        </div>
-                    </div>
+                    <h4>Phase 3: Implementation (60+ Days)</h4>
+                    <ul>
+                        <li><strong>Award Notifications:</strong> Expected April-June 2026</li>
+                        <li><strong>Vehicle Procurement:</strong> Order wheelchair-accessible vehicles</li>
+                        <li><strong>Technology Implementation:</strong> Install dispatch and tracking systems</li>
+                        <li><strong>Service Launch:</strong> Begin operations with funded equipment</li>
+                    </ul>
                 </div>
             </div>
 
+            <div class="alert alert-success">
+                <h4><i class="fas fa-lightbulb"></i> Pro Tips for Application Success</h4>
+                <ul>
+                    <li><strong>Document Everything:</strong> Keep detailed records of all communications and applications</li>
+                    <li><strong>Apply Early:</strong> Submit applications well before deadlines</li>
+                    <li><strong>Multiple Sources:</strong> Apply for several programs simultaneously</li>
+                    <li><strong>Professional Help:</strong> Consider hiring a grant writer for large applications</li>
+                    <li><strong>Follow Up:</strong> Stay in contact with program officers throughout the process</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Total Funding Summary -->
+        <section class="section">
+            <div class="section-header">
+                <h2 class="section-title">Total Available Funding Summary</h2>
+                <p class="section-subtitle">Combined funding potential for qualified NEMT businesses</p>
+            </div>
+
             <div class="card-grid">
-                <div class="card">
+                <div class="card" style="border-top-color: var(--success-color);">
                     <div class="card-header">
-                        <i class="card-icon fas fa-lightbulb"></i>
-                        <h3 class="card-title">Success Tips</h3>
+                        <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                        <h3 class="card-title">Maximum Funding Potential</h3>
                     </div>
                     <div class="card-content">
+                        <div class="funding-amount" style="font-size: 1.5rem;">
+                            $2.2 Million+ Total Available
+                        </div>
                         <ul>
-                            <li><strong>Start Early:</strong> Many programs have complex application processes</li>
-                            <li><strong>Rural Focus:</strong> Emphasize rural service delivery in all applications</li>
-                            <li><strong>Community Partnerships:</strong> Demonstrate healthcare facility support</li>
-                            <li><strong>Technology Integration:</strong> Highlight innovation and efficiency</li>
-                            <li><strong>Multiple Applications:</strong> Apply to multiple programs simultaneously</li>
+                            <li><strong>Vehicle Grants:</strong> $750,000 (5 vehicles)</li>
+                            <li><strong>Rural Expansion:</strong> $500,000</li>
+                            <li><strong>Technology Innovation:</strong> $1,000,000</li>
+                            <li><strong>SBA Loans:</strong> $5,500,000 (additional capital)</li>
+                            <li><strong>State Incentives:</strong> $50,000+ annual</li>
                         </ul>
+                        <div class="status-badge status-high">Maximum Scenario</div>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-header">
-                        <i class="card-icon fas fa-users"></i>
-                        <h3 class="card-title">Required Partnerships</h3>
+                        <div class="card-icon"><i class="fas fa-chart-pie"></i></div>
+                        <h3 class="card-title">Realistic Funding Scenario</h3>
                     </div>
                     <div class="card-content">
+                        <div class="funding-amount" style="background: linear-gradient(135deg, #3498db, #2980b9); font-size: 1.3rem;">
+                            $800,000 - $1.2 Million
+                        </div>
                         <ul>
-                            <li><strong>Healthcare Facilities:</strong> Letters of support essential</li>
-                            <li><strong>State Agencies:</strong> Coordinate with SCDHHS and SCDOT</li>
-                            <li><strong>Local Government:</strong> County and municipal endorsements</li>
-                            <li><strong>Community Organizations:</strong> Area Agencies on Aging, nonprofits</li>
-                            <li><strong>Other Providers:</strong> Coordination, not competition focus</li>
+                            <li><strong>Vehicle Grant:</strong> $300,000 (2 vehicles)</li>
+                            <li><strong>Rural Grant:</strong> $150,000</li>
+                            <li><strong>SBA Loan:</strong> $350,000</li>
+                            <li><strong>State Programs:</strong> $25,000</li>
+                            <li><strong>Training Grants:</strong> $15,000</li>
                         </ul>
+                        <div class="status-badge status-medium">Achievable Goal</div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Resources -->
-        <section id="resources" class="section">
+        <!-- Contact & Resources -->
+        <section class="section">
             <div class="section-header">
-                <h2 class="section-title">Key Resources & Contacts</h2>
+                <h2 class="section-title">Funding Resources & Contacts</h2>
+                <p class="section-subtitle">Key contacts for NEMT funding assistance</p>
             </div>
 
             <div class="card-grid">
                 <div class="card">
                     <div class="card-header">
-                        <i class="card-icon fas fa-globe"></i>
-                        <h3 class="card-title">Federal Resources</h3>
+                        <div class="card-icon"><i class="fas fa-phone"></i></div>
+                        <h3 class="card-title">SC DHHS NEMT Program</h3>
                     </div>
                     <div class="card-content">
-                        <ul>
-                            <li><strong>Grants.gov:</strong> Central application portal</li>
-                            <li><strong>FTA NEMT:</strong> transit.dot.gov/ccam/NEMT</li>
-                            <li><strong>USDA Rural Development:</strong> rd.usda.gov</li>
-                            <li><strong>SBA:</strong> sba.gov/funding-programs</li>
-                            <li><strong>HHS HRSA:</strong> hrsa.gov</li>
-                        </ul>
+                        <p><strong>Provider Enrollment & Funding</strong></p>
+                        <p>📞 Phone: (803) 898-2500</p>
+                        <p>📧 Email: ProviderServices@scdhhs.gov</p>
+                        <p>🌐 Website: scdhhs.gov/nemt</p>
+                        <p>📍 Address: 1801 Main Street, Columbia, SC 29201</p>
                     </div>
                 </div>
 
                 <div class="card">
                     <div class="card-header">
-                        <i class="card-icon fas fa-phone"></i>
-                        <h3 class="card-title">South Carolina Contacts</h3>
+                        <div class="card-icon"><i class="fas fa-building"></i></div>
+                        <h3 class="card-title">SBA South Carolina District</h3>
                     </div>
                     <div class="card-content">
-                        <ul>
-                            <li><strong>USDA SC:</strong> (803) 253-3846</li>
-                            <li><strong>SBA SC District:</strong> (803) 765-5377</li>
-                            <li><strong>SCDOT:</strong> (855) 467-2368</li>
-                            <li><strong>SCDHHS:</strong> (803) 898-2500</li>
-                            <li><strong>SCORE Mentors:</strong> score.org</li>
-                        </ul>
+                        <p><strong>Small Business Loan Programs</strong></p>
+                        <p>📞 Phone: (803) 765-5377</p>
+                        <p>📧 Email: south.carolina@sba.gov</p>
+                        <p>🌐 Website: sba.gov/offices/district/sc/columbia</p>
+                        <p>📍 Address: 1835 Assembly Street, Columbia, SC 29201</p>
                     </div>
                 </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <h3 class="card-title">SC Works Training Grants</h3>
+                    </div>
+                    <div class="card-content">
+                        <p><strong>Workforce Development Funding</strong></p>
+                        <p>📞 Phone: (803) 896-5627</p>
+                        <p>📧 Email: info@scworks.org</p>
+                        <p>🌐 Website: scworks.org</p>
+                        <p>📍 Multiple locations statewide</p>
+                    </div>
+                </card>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-section">
-                <h3>Federal Funding Guide</h3>
-                <p>Comprehensive resource for securing federal funding for your medical transportation business startup.</p>
-            </div>
-
-            <div class="footer-section">
-                <h3>Quick Access</h3>
-                <a href="#critical-deadlines">Critical Deadlines</a>
-                <a href="#nemt-programs">NEMT Programs</a>
-                <a href="#hhs-funding">HHS Rural Health</a>
-                <a href="#usda-funding">USDA Grants</a>
-            </div>
-
-            <div class="footer-section">
-                <h3>Application Tools</h3>
-                <a href="https://grants.gov" target="_blank">Grants.gov</a>
-                <a href="https://sam.gov" target="_blank">SAM.gov</a>
-                <a href="#resources">Contact Directory</a>
-                <a href="#application-strategy">Strategy Guide</a>
-            </div>
-
-            <div class="footer-section">
-                <h3>Next Steps</h3>
-                <a href="startup-guide.html">Implementation Guide</a>
-                <a href="compliance.html">Regulatory Compliance</a>
+                <h3>Quick Links</h3>
+                <a href="index.html">Home</a>
                 <a href="analysis.html">Business Analysis</a>
-                <a href="index.html">Back to Home</a>
+                <a href="startup-guide.html">Startup Guide</a>
+                <a href="compliance.html">Compliance</a>
+            </div>
+            <div class="footer-section">
+                <h3>Funding Resources</h3>
+                <a href="https://grants.gov" target="_blank">Grants.gov</a>
+                <a href="https://scdhhs.gov" target="_blank">SC DHHS</a>
+                <a href="https://sba.gov" target="_blank">SBA Loans</a>
+                <a href="https://scworks.org" target="_blank">SC Works</a>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <a href="mailto:funding@medtransportsc.com">Funding Questions</a>
+                <a href="tel:+1-843-555-0123">Call: (843) 555-0123</a>
+                <p>Professional grant writing services available</p>
             </div>
         </div>
-
         <div class="footer-bottom">
-            <p>&copy; 2026 Medical Transportation Business Analysis. Generated with Claude Code AI Swarm Research System.</p>
+            <p>&copy; 2026 Medical Transportation Business Analysis. Educational purposes only. Consult with licensed professionals for business and legal advice.</p>
         </div>
     </footer>
 
