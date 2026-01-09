@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Comprehensive business analysis and startup guide for launching a medical transportation (NEMT) business in South Carolina with federal funding opportunities.">
+    <meta name="keywords" content="medical transportation, NEMT, South Carolina, business startup, federal funding, healthcare transportation">
+    <meta name="author" content="Medical Transportation Business Analysis">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Medical Transportation Business - South Carolina Startup Guide">
+    <meta property="og:description" content="$50B+ federal funding available. Complete analysis for starting a profitable medical transportation business in SC.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://github.com/mikah33/medical">
+
+    <title>Medical Transportation Business - South Carolina Startup Guide</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚐</text></svg>">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Additional CSS for homepage -->
+    <style>
+        .countdown-container {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .countdown-title {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+        }
+
+        .countdown-display {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .countdown-item {
+            text-align: center;
+            min-width: 80px;
+        }
+
+        .countdown-number {
+            display: block;
+            font-size: 3rem;
+            font-weight: bold;
+            line-height: 1;
+        }
+
+        .countdown-label {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            opacity: 0.9;
+        }
+
+        .countdown-expired {
+            font-size: 1.5rem;
+            color: #ffcccc;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .roi-calculator {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+        }
+
+        .calculator-input {
+            margin: 1rem 0;
+        }
+
+        .calculator-input label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .calculator-input input {
+            width: 100%;
+            padding: 0.8rem;
+            border: 2px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .calculator-input input:focus {
+            outline: none;
+            border-color: var(--secondary-color);
+        }
+
+        .calculator-results {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+        }
+
+        .calculator-result {
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .calculator-result:last-child {
+            border-bottom: none;
+        }
+
+        .roi-highlight {
+            background: var(--success-color);
+            color: white;
+            padding: 1rem;
+            border-radius: 6px;
+            margin-top: 0.5rem;
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .countdown-display {
+                gap: 1rem;
+            }
+
+            .countdown-number {
+                font-size: 2rem;
+            }
+
+            .feature-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-ambulance"></i> MedTrans Business
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="analysis.html">Analysis</a></li>
+                    <li><a href="startup-guide.html">Startup Guide</a></li>
+                    <li><a href="funding.html">Federal Funding</a></li>
+                    <li><a href="compliance.html">Compliance</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Urgent Alert Banner -->
+    <div class="urgent-alert">
+        <strong>URGENT: Federal funding deadline January 15, 2026 - Only 6 days remaining!</strong>
+        Up to $500K+ available for medical transportation startups.
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <h1>Start Your Medical Transportation Business in South Carolina</h1>
+            <p>Complete business analysis with federal funding opportunities worth $50+ billion through 2030</p>
+
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="50">$50B+</span>
+                    <span class="stat-label">Federal Funding Available</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="35">35.3%</span>
+                    <span class="stat-label">SC Residents Miss Medical Appointments</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="86400">$86K</span>
+                    <span class="stat-label">Annual Revenue per Vehicle</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="30">20-30%</span>
+                    <span class="stat-label">Profit Margin Potential</span>
+                </div>
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <a href="startup-guide.html" class="btn btn-primary btn-large">Get Started Now</a>
+                <a href="analysis.html" class="btn btn-outline">View Full Analysis</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Critical Timing Section -->
+        <section id="urgent-timing" class="section">
+            <div class="countdown-container">
+                <div class="countdown-title">
+                    <i class="fas fa-clock"></i> Federal Funding Deadline
+                </div>
+                <div class="countdown-display" id="countdown">
+                    <!-- Countdown timer will be populated by JavaScript -->
+                </div>
+                <p style="margin-top: 1rem; opacity: 0.9;">
+                    Federal Lands Highway funding could provide substantial startup capital
+                </p>
+                <a href="funding.html" class="btn btn-warning" style="margin-top: 1rem;">
+                    Apply Now
+                </a>
+            </div>
+        </section>
+
+        <!-- Business Overview -->
+        <section id="overview" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Why Medical Transportation?</h2>
+                <p class="section-subtitle">
+                    South Carolina presents an exceptional opportunity for medical transportation businesses with strong demographics, federal support, and significant unmet demand.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-chart-line"></i>
+                        <h3 class="card-title">Growing Market</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Aging population: 46.9% of adults 75+ have disabilities</li>
+                            <li>Healthcare expansion: 41,310 new jobs projected</li>
+                            <li>Industry growth: 7-9% annually through 2030</li>
+                            <li>Rural focus aligns with federal funding priorities</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-dollar-sign"></i>
+                        <h3 class="card-title">Federal Support</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>$50B Rural Health Transformation Program</li>
+                            <li>NEMT grants: $100K-$300K available</li>
+                            <li>USDA Rural Development: Up to $500K</li>
+                            <li>SBA loans: Up to $5M with favorable terms</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-target"></i>
+                        <h3 class="card-title">Proven Success</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li>Revenue potential: $30K-$56K per vehicle annually</li>
+                            <li>Break-even: 155 trips per month per vehicle</li>
+                            <li>Target profit margins: 20-30%</li>
+                            <li>ROI recovery: 18-24 months typically</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Calculator -->
+        <section id="calculator" class="section">
+            <div class="section-header">
+                <h2 class="section-title">ROI Calculator</h2>
+                <p class="section-subtitle">
+                    Calculate your potential return on investment based on your startup scenario.
+                </p>
+            </div>
+
+            <div class="roi-calculator" id="roi-calculator">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+                    <div class="calculator-input">
+                        <label for="investment">Initial Investment ($)</label>
+                        <input type="number" id="investment" value="67000" min="0" step="1000">
+                    </div>
+                    <div class="calculator-input">
+                        <label for="vehicle-count">Number of Vehicles</label>
+                        <input type="number" id="vehicle-count" value="1" min="1" max="10">
+                    </div>
+                </div>
+
+                <div class="calculator-results" id="calculator-results">
+                    <!-- Results will be populated by JavaScript -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Key Features -->
+        <section id="features" class="section">
+            <div class="section-header">
+                <h2 class="section-title">What You'll Get</h2>
+                <p class="section-subtitle">
+                    Comprehensive resources to guide you from concept to successful operation.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-file-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Complete Analysis</h3>
+                    <p>98-page comprehensive business analysis covering market research, financial projections, and competitive landscape.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-route"></i>
+                    </div>
+                    <h3 class="feature-title">Step-by-Step Guide</h3>
+                    <p>6-phase implementation roadmap with interactive progress tracking and critical path dependencies.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <h3 class="feature-title">Funding Opportunities</h3>
+                    <p>Complete federal grant guide with applications, deadlines, and strategies for securing startup capital.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3 class="feature-title">Compliance Framework</h3>
+                    <p>Regulatory requirements checklist covering HIPAA, DOT, ADA, and South Carolina specific licensing.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="feature-title">Partnership Network</h3>
+                    <p>Healthcare facility contacts, regulatory agencies, and strategic partnership opportunities.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3 class="feature-title">Success Metrics</h3>
+                    <p>KPI tracking framework with benchmarks for vehicle utilization, profitability, and growth.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick Stats -->
+        <section id="quick-stats" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Market Opportunity at a Glance</h2>
+            </div>
+
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Investment Scenario</th>
+                            <th>Initial Investment</th>
+                            <th>Annual Revenue</th>
+                            <th>Net Income</th>
+                            <th>ROI</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Conservative (1 Vehicle)</strong></td>
+                            <td>$67,000</td>
+                            <td>$86,400</td>
+                            <td>$12,500</td>
+                            <td>19.2%</td>
+                        </tr>
+                        <tr style="background: #e8f5e8;">
+                            <td><strong>Moderate (1 Vehicle Optimized)</strong></td>
+                            <td>$67,000</td>
+                            <td>$100,000</td>
+                            <td>$26,100</td>
+                            <td>40.2%</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aggressive (2 Vehicles)</strong></td>
+                            <td>$133,000</td>
+                            <td>$172,800</td>
+                            <td>$27,000</td>
+                            <td>20.8%</td>
+                        </tr>
+                        <tr style="background: #e8f5e8;">
+                            <td><strong>Optimized (2 Vehicles)</strong></td>
+                            <td>$133,000</td>
+                            <td>$200,000</td>
+                            <td>$54,200</td>
+                            <td>41.7%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Call to Action -->
+        <section id="cta" class="section">
+            <div style="background: linear-gradient(135deg, var(--secondary-color), var(--primary-color)); color: white; padding: 4rem 2rem; border-radius: 15px; text-align: center;">
+                <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Ready to Start?</h2>
+                <p style="font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.9;">
+                    Don't miss the federal funding deadlines. Get your comprehensive startup package today.
+                </p>
+                <div>
+                    <a href="startup-guide.html" class="btn btn-warning" style="margin-right: 1rem;">Start Implementation Guide</a>
+                    <a href="funding.html" class="btn" style="background: white; color: var(--primary-color);">View Funding Opportunities</a>
+                </div>
+                <p style="margin-top: 2rem; font-size: 0.9rem; opacity: 0.8;">
+                    <i class="fas fa-clock"></i> Time-sensitive federal opportunities closing soon
+                </p>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Get Started Today</h2>
+                <p class="section-subtitle">
+                    Have questions about starting your medical transportation business? We're here to help.
+                </p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 3rem; align-items: center;">
+                <div>
+                    <div class="alert alert-info">
+                        <h4><i class="fas fa-info-circle"></i> Important Resources</h4>
+                        <p><strong>SCDHHS Contact:</strong> (803) 898-2500<br>
+                        <strong>SBA SC Office:</strong> (803) 765-5377<br>
+                        <strong>Federal Grants:</strong> grants.gov<br>
+                        <strong>USDA Rural Development:</strong> (803) 253-3846</p>
+                    </div>
+
+                    <div style="margin-top: 2rem;">
+                        <h4>Next Steps:</h4>
+                        <ol style="margin-left: 1.5rem; margin-top: 1rem;">
+                            <li>Review the <a href="analysis.html">complete business analysis</a></li>
+                            <li>Follow the <a href="startup-guide.html">step-by-step implementation guide</a></li>
+                            <li>Apply for <a href="funding.html">federal funding opportunities</a></li>
+                            <li>Begin <a href="compliance.html">licensing and compliance</a> process</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <form id="contact-form" style="background: var(--light-bg); padding: 2rem; border-radius: 10px;">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--primary-color);">Request Information</h3>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Name *</label>
+                        <input type="text" name="name" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--border-color); border-radius: 6px;">
+                    </div>
+
+                    <div style="margin-bottom: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Email *</label>
+                        <input type="email" name="email" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--border-color); border-radius: 6px;">
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: 600;">Message *</label>
+                        <textarea name="message" rows="4" required style="width: 100%; padding: 0.8rem; border: 2px solid var(--border-color); border-radius: 6px; resize: vertical;"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Medical Transportation Business</h3>
+                <p>Comprehensive startup guide for South Carolina medical transportation services with federal funding opportunities.</p>
+                <p><strong>Generated by AI Research Swarm</strong></p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="analysis.html">Business Analysis</a>
+                <a href="startup-guide.html">Startup Guide</a>
+                <a href="funding.html">Federal Funding</a>
+                <a href="compliance.html">Compliance</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Key Resources</h3>
+                <a href="https://www.scdhhs.gov" target="_blank">SCDHHS</a>
+                <a href="https://www.sba.gov" target="_blank">SBA</a>
+                <a href="https://grants.gov" target="_blank">Federal Grants</a>
+                <a href="https://rd.usda.gov" target="_blank">USDA Rural Development</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Contact Info</h3>
+                <p><i class="fas fa-envelope"></i> Business inquiries</p>
+                <p><i class="fas fa-phone"></i> Regulatory agencies listed in analysis</p>
+                <p><i class="fas fa-globe"></i> GitHub repository available</p>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Medical Transportation Business Analysis. Generated with Claude Code AI Swarm Research System.</p>
+            <p>This analysis is provided for informational purposes. Consult qualified professionals before making investment decisions.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>
