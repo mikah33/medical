@@ -1,0 +1,783 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Complete guide to federal funding opportunities for medical transportation businesses including NEMT grants, FHWA funding, and SBA loans.">
+    <title>Federal Funding Opportunities - Medical Transportation SC</title>
+
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💰</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Additional CSS for funding page -->
+    <style>
+        .funding-alert {
+            background: linear-gradient(135deg, #e74c3c, #c0392b);
+            color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 2rem 0;
+            text-align: center;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(231, 76, 60, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(231, 76, 60, 0); }
+        }
+
+        .deadline-item {
+            background: white;
+            padding: 1.5rem;
+            margin: 1rem 0;
+            border-radius: 8px;
+            border-left: 5px solid;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .deadline-urgent {
+            border-left-color: #e74c3c;
+            background: #fdf2f2;
+        }
+
+        .deadline-soon {
+            border-left-color: #f39c12;
+            background: #fefbf3;
+        }
+
+        .deadline-future {
+            border-left-color: #3498db;
+            background: #f8fffe;
+        }
+
+        .deadline-content {
+            flex: 1;
+        }
+
+        .deadline-date {
+            background: var(--accent-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            font-weight: bold;
+            text-align: center;
+            min-width: 120px;
+        }
+
+        .deadline-soon .deadline-date {
+            background: var(--warning-color);
+        }
+
+        .deadline-future .deadline-date {
+            background: var(--secondary-color);
+        }
+
+        .funding-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin: 1.5rem 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-top: 4px solid var(--secondary-color);
+        }
+
+        .funding-amount {
+            background: linear-gradient(135deg, var(--success-color), #2ecc71);
+            color: white;
+            padding: 1rem;
+            border-radius: 8px;
+            text-align: center;
+            margin: 1rem 0;
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .application-steps {
+            background: var(--light-bg);
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .step-number {
+            background: var(--secondary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 1rem;
+        }
+
+        .eligibility-list {
+            background: #e8f5e8;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border: 1px solid #c3e6c3;
+        }
+
+        .eligibility-list h4 {
+            color: #2d5a2d;
+            margin-bottom: 1rem;
+        }
+
+        .contact-info {
+            background: var(--primary-color);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1rem 0;
+        }
+
+        .contact-info h4 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-ambulance"></i> MedTrans Business
+            </a>
+
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="analysis.html">Analysis</a></li>
+                    <li><a href="startup-guide.html">Startup Guide</a></li>
+                    <li><a href="funding.html" class="active">Federal Funding</a></li>
+                    <li><a href="compliance.html">Compliance</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" style="padding: 6rem 2rem 3rem; margin-top: 70px;">
+        <div class="hero-container">
+            <h1>Federal Funding Opportunities</h1>
+            <p>$50+ billion in federal funding available for medical transportation businesses through 2030</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Critical Deadlines -->
+        <section id="critical-deadlines" class="section">
+            <div class="funding-alert">
+                <h2><i class="fas fa-exclamation-triangle"></i> URGENT: Critical Funding Deadlines</h2>
+                <p style="font-size: 1.2rem; margin: 1rem 0;">
+                    Multiple federal funding opportunities with approaching deadlines - immediate action required!
+                </p>
+                <div class="countdown-display" id="countdown" style="justify-content: center; margin-top: 1.5rem;">
+                    <!-- Countdown populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="deadline-item deadline-urgent">
+                <div class="deadline-content">
+                    <h3><i class="fas fa-road"></i> Federal Lands Highway Funding</h3>
+                    <p><strong>FHWA Infrastructure Projects</strong> - Rural transportation infrastructure improvements</p>
+                    <p><strong>Funding:</strong> Varies by project | <strong>Agency:</strong> Federal Highway Administration</p>
+                </div>
+                <div class="deadline-date">
+                    JAN 15<br>2026
+                </div>
+            </div>
+
+            <div class="deadline-item deadline-soon">
+                <div class="deadline-content">
+                    <h3><i class="fas fa-building"></i> BUILD Grant Program</h3>
+                    <p><strong>FHWA Capital Investments</strong> - Surface transportation infrastructure needs</p>
+                    <p><strong>Funding:</strong> Major capital projects | <strong>Focus:</strong> Rural areas and tribal lands</p>
+                </div>
+                <div class="deadline-date">
+                    FEB 24<br>2026
+                </div>
+            </div>
+
+            <div class="deadline-item deadline-future">
+                <div class="deadline-content">
+                    <h3><i class="fas fa-leaf"></i> USDA Rural Development Grants</h3>
+                    <p><strong>Rural Economic Development</strong> - Business development in rural areas</p>
+                    <p><strong>Funding:</strong> Up to $500,000 | <strong>Target:</strong> Towns under 50,000 population</p>
+                </div>
+                <div class="deadline-date">
+                    MAR 31<br>2026
+                </div>
+            </div>
+
+            <div class="deadline-item deadline-future">
+                <div class="deadline-content">
+                    <h3><i class="fas fa-leaf"></i> USDA REDLG Q4</h3>
+                    <p><strong>Rural Economic Development</strong> - Final quarterly deadline for 2026</p>
+                    <p><strong>Funding:</strong> Up to $500,000 grants | <strong>Requirement:</strong> ≤50 employees, <$1M revenue</p>
+                </div>
+                <div class="deadline-date">
+                    JUN 30<br>2026
+                </div>
+            </div>
+        </section>
+
+        <!-- NEMT Programs -->
+        <section id="nemt-programs" class="section">
+            <div class="section-header">
+                <h2 class="section-title">NEMT (Non-Emergency Medical Transportation) Programs</h2>
+                <p class="section-subtitle">
+                    Federal Transit Administration funding specifically designed for medical transportation services.
+                </p>
+            </div>
+
+            <div class="funding-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                    <h3><i class="fas fa-ambulance"></i> ICAM Pilot Program</h3>
+                    <span class="status-badge status-high">High Priority</span>
+                </div>
+
+                <div class="funding-amount">
+                    $100,000 - $300,000 Average Grants
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; margin: 1.5rem 0;">
+                    <div>
+                        <h4>Program Details</h4>
+                        <ul>
+                            <li><strong>Federal Share:</strong> 80% (20% local match)</li>
+                            <li><strong>Use:</strong> Capital expenses (vehicles, technology)</li>
+                            <li><strong>Timeline:</strong> 24 months to complete</li>
+                            <li><strong>Status:</strong> Funded through fiscal year 2026</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Eligibility Requirements</h4>
+                        <ul>
+                            <li>Demonstrated NEMT service improvement</li>
+                            <li>Coordination with existing providers</li>
+                            <li>Technology innovation focus</li>
+                            <li>Performance measurement plan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="application-steps">
+                    <h4>Application Process</h4>
+                    <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                        <span class="step-number">1</span>
+                        <span>Submit Letter of Intent with project concept</span>
+                    </div>
+                    <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                        <span class="step-number">2</span>
+                        <span>Develop full application with community partnerships</span>
+                    </div>
+                    <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                        <span class="step-number">3</span>
+                        <span>Submit through grants.gov with required documentation</span>
+                    </div>
+                </div>
+
+                <div class="contact-info">
+                    <h4>Contact Information</h4>
+                    <p><strong>Website:</strong> transit.dot.gov/ccam/NEMT</p>
+                    <p><strong>Email:</strong> FTA regional office for coordination</p>
+                    <p><strong>Application:</strong> grants.gov (search "ICAM")</p>
+                </div>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-wheelchair"></i>
+                        <h3 class="card-title">Section 5310 Enhanced Mobility</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="funding-amount" style="font-size: 1rem;">
+                            Formula-Based Funding
+                        </div>
+                        <ul>
+                            <li><strong>Target:</strong> Seniors and individuals with disabilities</li>
+                            <li><strong>Federal Share:</strong> 80% capital, 50% operating</li>
+                            <li><strong>Uses:</strong> Vehicle purchases and operational costs</li>
+                            <li><strong>Application:</strong> Through state DOT offices</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-map-marked-alt"></i>
+                        <h3 class="card-title">Rural Transit Grants (Section 5311)</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="funding-amount" style="font-size: 1rem;">
+                            Based on Demographics
+                        </div>
+                        <ul>
+                            <li><strong>Target:</strong> Areas with populations under 50,000</li>
+                            <li><strong>Formula:</strong> Land area, population, revenue vehicle miles</li>
+                            <li><strong>Federal Share:</strong> 80% capital, 50% operating</li>
+                            <li><strong>Priority:</strong> Low-income individuals</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HHS Rural Health -->
+        <section id="hhs-funding" class="section">
+            <div class="section-header">
+                <h2 class="section-title">HHS Rural Health Transformation Program</h2>
+                <p class="section-subtitle">
+                    $50 billion over 5 years (2026-2030) - The largest rural healthcare investment in decades.
+                </p>
+            </div>
+
+            <div class="funding-card" style="border-top-color: var(--success-color);">
+                <h3><i class="fas fa-hospital"></i> Rural Health Transformation Program (2026 Major Initiative)</h3>
+
+                <div class="funding-amount" style="background: linear-gradient(135deg, #e74c3c, #c0392b);">
+                    $50 Billion Total Program | $147-281 Million Average per State
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                    <div>
+                        <h4>Program Overview</h4>
+                        <ul>
+                            <li><strong>Total Funding:</strong> $50 billion over 5 years</li>
+                            <li><strong>Annual Amount:</strong> $10 billion per year</li>
+                            <li><strong>State Awards:</strong> $147-281 million average</li>
+                            <li><strong>Transportation Component:</strong> Mobile healthcare, transport, EMS hubs</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4>Eligible Activities</h4>
+                        <ul>
+                            <li>Mobile integrated healthcare programs</li>
+                            <li>High-risk transport technology</li>
+                            <li>Regional Emergency Medical Services hubs</li>
+                            <li>Telehealth transportation integration</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="eligibility-list">
+                    <h4><i class="fas fa-check-circle"></i> Eligibility Criteria</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem;">
+                        <ul>
+                            <li>Rural area designation required</li>
+                            <li>Healthcare transportation focus</li>
+                            <li>Community partnership requirements</li>
+                        </ul>
+                        <ul>
+                            <li>Demonstrated community need</li>
+                            <li>Sustainable operating model</li>
+                            <li>Technology integration plan</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="alert alert-success">
+                    <h4><i class="fas fa-lightbulb"></i> Strategic Opportunity</h4>
+                    <p>This program represents the largest rural healthcare investment in decades. Medical transportation businesses that align with rural health improvement goals have exceptional funding opportunities through 2030.</p>
+                </div>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-user-md"></i>
+                        <h3 class="card-title">HRSA Rural Health Grants</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><strong>Focus:</strong> Rural healthcare access improvement</li>
+                            <li><strong>Transportation:</strong> Mobile healthcare, telehealth transport</li>
+                            <li><strong>Application:</strong> Through HRSA grant opportunities</li>
+                            <li><strong>Partnerships:</strong> Healthcare facilities strongly encouraged</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-heartbeat"></i>
+                        <h3 class="card-title">Mobile Healthcare Initiatives</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><strong>Focus:</strong> Bringing healthcare to underserved areas</li>
+                            <li><strong>Transportation Role:</strong> Critical infrastructure component</li>
+                            <li><strong>Technology:</strong> EMS hubs and emergency response</li>
+                            <li><strong>Funding:</strong> Substantial allocation for transport services</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- USDA Rural Development -->
+        <section id="usda-funding" class="section">
+            <div class="section-header">
+                <h2 class="section-title">USDA Rural Development Grants</h2>
+                <p class="section-subtitle">
+                    Business development grants specifically targeting rural transportation improvements.
+                </p>
+            </div>
+
+            <div class="card-grid">
+                <div class="funding-card">
+                    <h3><i class="fas fa-leaf"></i> Rural Business Development Grants (RBDG)</h3>
+                    <div class="funding-amount">
+                        $10,000 - $500,000 (Typically)
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <h4>Requirements</h4>
+                            <ul>
+                                <li><strong>Geographic:</strong> Towns outside urbanized areas of 50,000+</li>
+                                <li><strong>Cost Share:</strong> None required</li>
+                                <li><strong>Priority:</strong> Smaller requests prioritized</li>
+                                <li><strong>Use:</strong> Rural transportation improvement specifically listed</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Evaluation Criteria</h4>
+                            <ul>
+                                <li>Local job creation evidence</li>
+                                <li>Non-federal funding commitment</li>
+                                <li>Economic need of target area</li>
+                                <li>Alignment with development priorities</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="contact-info">
+                        <h4>USDA Contact Information</h4>
+                        <p><strong>SC Rural Development:</strong> (803) 253-3846</p>
+                        <p><strong>Website:</strong> rd.usda.gov</p>
+                        <p><strong>Application:</strong> Rolling basis</p>
+                    </div>
+                </div>
+
+                <div class="funding-card">
+                    <h3><i class="fas fa-chart-line"></i> Rural Economic Development Loan & Grant (REDLG)</h3>
+                    <div class="funding-amount">
+                        $50M Loans | $10M Grants Available (2026)
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem;">
+                        <div>
+                            <h4>2026 Availability</h4>
+                            <ul>
+                                <li><strong>Loans:</strong> $50 million total</li>
+                                <li><strong>Grants:</strong> $10 million total</li>
+                                <li><strong>Business Limit:</strong> 50 or fewer employees</li>
+                                <li><strong>Revenue Limit:</strong> Under $1 million gross</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Quarterly Deadlines</h4>
+                            <ul>
+                                <li><strong>Q1:</strong> September 30, 2025 (passed)</li>
+                                <li><strong>Q2:</strong> December 31, 2025 (passed)</li>
+                                <li><strong>Q3:</strong> March 31, 2026</li>
+                                <li><strong>Q4:</strong> June 30, 2026</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning">
+                        <h4><i class="fas fa-calendar-alt"></i> Deadline Alert</h4>
+                        <p>Q3 deadline is March 31, 2026. Start application process immediately to meet this deadline.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SBA Programs -->
+        <section id="sba-programs" class="section">
+            <div class="section-header">
+                <h2 class="section-title">SBA (Small Business Administration) Programs</h2>
+                <p class="section-subtitle">
+                    Loan programs and limited grant opportunities with 2025-2026 program changes.
+                </p>
+            </div>
+
+            <div class="alert alert-warning">
+                <h4><i class="fas fa-exclamation-triangle"></i> 2025-2026 SBA Changes</h4>
+                <p>New requirements include collateral for loans $50K+ (down from $500K), minimum credit score 165 (up from 155), and 10% equity injection for startups.</p>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-handshake"></i>
+                        <h3 class="card-title">7(a) Loans</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="funding-amount" style="font-size: 1rem;">
+                            Up to $5 Million
+                        </div>
+                        <ul>
+                            <li><strong>Uses:</strong> Real estate, working capital, furniture, supplies</li>
+                            <li><strong>Terms:</strong> Varies by use (up to 25 years real estate)</li>
+                            <li><strong>Fees:</strong> 0.25% - 3.75% based on amount and term</li>
+                            <li><strong>New Requirement:</strong> Collateral required for loans $50,000+</li>
+                        </ul>
+
+                        <div class="contact-info">
+                            <h4>SBA SC Contact</h4>
+                            <p><strong>District Office:</strong> (803) 765-5377</p>
+                            <p><strong>SCORE Mentors:</strong> score.org (Free counseling)</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-building"></i>
+                        <h3 class="card-title">504 Loans</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="funding-amount" style="font-size: 1rem;">
+                            Up to $5 Million ($5.5M Energy)
+                        </div>
+                        <ul>
+                            <li><strong>Uses:</strong> Fixed assets (land, buildings)</li>
+                            <li><strong>Terms:</strong> Long-term, fixed-rate</li>
+                            <li><strong>Structure:</strong> 50% conventional, 40% SBA, 10% down</li>
+                            <li><strong>Best For:</strong> Real estate and major equipment purchases</li>
+                        </ul>
+
+                        <div style="background: var(--light-bg); padding: 1rem; border-radius: 6px; margin-top: 1rem;">
+                            <h5>Ideal for Vehicle Purchases</h5>
+                            <p style="margin: 0;">504 loans are excellent for wheelchair-accessible vehicle purchases and facility acquisition.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-coins"></i>
+                        <h3 class="card-title">Microloans</h3>
+                    </div>
+                    <div class="card-content">
+                        <div class="funding-amount" style="font-size: 1rem;">
+                            Up to $50,000
+                        </div>
+                        <ul>
+                            <li><strong>Provider:</strong> Intermediary lenders</li>
+                            <li><strong>Best For:</strong> Smaller startup needs</li>
+                            <li><strong>Terms:</strong> Up to 6 years</li>
+                            <li><strong>Use:</strong> Working capital, inventory, supplies, equipment</li>
+                        </ul>
+
+                        <div class="alert alert-info" style="margin-top: 1rem;">
+                            <p><strong>Note:</strong> SBA generally does not provide grants for general business expenses or startups. Focus on loan programs for funding.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Application Strategy -->
+        <section id="application-strategy" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Application Strategy</h2>
+                <p class="section-subtitle">
+                    Maximize your success rate with strategic application approach.
+                </p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <h4>Phase 1: Immediate Action (Next 7 Days)</h4>
+                    <div class="application-steps">
+                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                            <span class="step-number">1</span>
+                            <span>Contact FHWA immediately for Federal Lands Highway funding (deadline: January 15)</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                            <span class="step-number">2</span>
+                            <span>Begin BUILD Grant application preparation (deadline: February 24)</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                            <span class="step-number">3</span>
+                            <span>Register on grants.gov and SAM.gov if not already done</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Phase 2: Foundation Building (Month 1)</h4>
+                    <div class="application-steps">
+                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                            <span class="step-number">1</span>
+                            <span>Submit USDA Rural Business Development Grant applications</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                            <span class="step-number">2</span>
+                            <span>Contact HRSA about Rural Health Transformation Program</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                            <span class="step-number">3</span>
+                            <span>Begin SBA loan pre-qualification process</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <h4>Phase 3: Long-term Development (Months 2-3)</h4>
+                    <div class="application-steps">
+                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                            <span class="step-number">1</span>
+                            <span>Prepare ICAM pilot program application</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                            <span class="step-number">2</span>
+                            <span>Submit USDA REDLG application for Q3 deadline</span>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0.5rem 0;">
+                            <span class="step-number">3</span>
+                            <span>Coordinate with state DOT for Section 5310/5311 funding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-lightbulb"></i>
+                        <h3 class="card-title">Success Tips</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><strong>Start Early:</strong> Many programs have complex application processes</li>
+                            <li><strong>Rural Focus:</strong> Emphasize rural service delivery in all applications</li>
+                            <li><strong>Community Partnerships:</strong> Demonstrate healthcare facility support</li>
+                            <li><strong>Technology Integration:</strong> Highlight innovation and efficiency</li>
+                            <li><strong>Multiple Applications:</strong> Apply to multiple programs simultaneously</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-users"></i>
+                        <h3 class="card-title">Required Partnerships</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><strong>Healthcare Facilities:</strong> Letters of support essential</li>
+                            <li><strong>State Agencies:</strong> Coordinate with SCDHHS and SCDOT</li>
+                            <li><strong>Local Government:</strong> County and municipal endorsements</li>
+                            <li><strong>Community Organizations:</strong> Area Agencies on Aging, nonprofits</li>
+                            <li><strong>Other Providers:</strong> Coordination, not competition focus</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Resources -->
+        <section id="resources" class="section">
+            <div class="section-header">
+                <h2 class="section-title">Key Resources & Contacts</h2>
+            </div>
+
+            <div class="card-grid">
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-globe"></i>
+                        <h3 class="card-title">Federal Resources</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><strong>Grants.gov:</strong> Central application portal</li>
+                            <li><strong>FTA NEMT:</strong> transit.dot.gov/ccam/NEMT</li>
+                            <li><strong>USDA Rural Development:</strong> rd.usda.gov</li>
+                            <li><strong>SBA:</strong> sba.gov/funding-programs</li>
+                            <li><strong>HHS HRSA:</strong> hrsa.gov</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-header">
+                        <i class="card-icon fas fa-phone"></i>
+                        <h3 class="card-title">South Carolina Contacts</h3>
+                    </div>
+                    <div class="card-content">
+                        <ul>
+                            <li><strong>USDA SC:</strong> (803) 253-3846</li>
+                            <li><strong>SBA SC District:</strong> (803) 765-5377</li>
+                            <li><strong>SCDOT:</strong> (855) 467-2368</li>
+                            <li><strong>SCDHHS:</strong> (803) 898-2500</li>
+                            <li><strong>SCORE Mentors:</strong> score.org</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Federal Funding Guide</h3>
+                <p>Comprehensive resource for securing federal funding for your medical transportation business startup.</p>
+            </div>
+
+            <div class="footer-section">
+                <h3>Quick Access</h3>
+                <a href="#critical-deadlines">Critical Deadlines</a>
+                <a href="#nemt-programs">NEMT Programs</a>
+                <a href="#hhs-funding">HHS Rural Health</a>
+                <a href="#usda-funding">USDA Grants</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Application Tools</h3>
+                <a href="https://grants.gov" target="_blank">Grants.gov</a>
+                <a href="https://sam.gov" target="_blank">SAM.gov</a>
+                <a href="#resources">Contact Directory</a>
+                <a href="#application-strategy">Strategy Guide</a>
+            </div>
+
+            <div class="footer-section">
+                <h3>Next Steps</h3>
+                <a href="startup-guide.html">Implementation Guide</a>
+                <a href="compliance.html">Regulatory Compliance</a>
+                <a href="analysis.html">Business Analysis</a>
+                <a href="index.html">Back to Home</a>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2026 Medical Transportation Business Analysis. Generated with Claude Code AI Swarm Research System.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
